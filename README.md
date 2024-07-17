@@ -34,6 +34,6 @@
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mohitpal2621&theme=radical" alt="mohitpal2621" /></p>
 
 <div align="center">
-  <img height="200" width="700" src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif"  />
+  <img height="400" width="700" src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif"  />
 </div>
 
