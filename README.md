@@ -72,29 +72,32 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Joystick.png" alt="🕹️" width="28" height="28" /> Arcade
 
-**BUG HUNT**: help the robot squash bugs before they ship to prod. Tap an arrow, press **Create** on the issue that opens, and your move lands in about 30 seconds. Every squash puts you on the leaderboard.
+**BUG HUNT** is a tiny retro arcade game I built from scratch. Squash every bug before the deploy ships them to prod. Press any button to play it right in your browser, no sign-in needed.
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000001-dark.svg" />
-    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000001-light.svg" alt="BUG HUNT arcade screen: a robot, bugs and server racks on a CRT, with a hi-score table" width="100%" />
-  </picture>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/demo-dark.svg" />
+      <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/demo-light.svg" alt="BUG HUNT demo: a robot grabs a coffee to freeze the bugs, then squashes them between server racks on a retro CRT screen" width="560" />
+    </picture>
+  </a>
 </p>
 
 <p align="center">
-<a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cup&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move up"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/up-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/up-light.svg" alt="Up" width="48" height="48" /></picture></a><br />
-<a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cleft&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move left"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/left-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/left-light.svg" alt="Left" width="48" height="48" /></picture></a><a href="https://github.com/mohitpal2621?tab=overview&amp;arcade=refresh#-arcade" title="Refresh the screen"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/refresh-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/refresh-light.svg" alt="Refresh" width="48" height="48" /></picture></a><a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cright&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move right"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/right-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/right-light.svg" alt="Right" width="48" height="48" /></picture></a><br />
-<a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cdown&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move down"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/down-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/down-light.svg" alt="Down" width="48" height="48" /></picture></a>
+<a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/up-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/up-light.svg" alt="Up" width="48" height="48" /></picture></a><br />
+<a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/left-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/left-light.svg" alt="Left" width="48" height="48" /></picture></a><a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/play-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/play-light.svg" alt="Play" width="48" height="48" /></picture></a><a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/right-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/right-light.svg" alt="Right" width="48" height="48" /></picture></a><br />
+<a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/down-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/down-light.svg" alt="Down" width="48" height="48" /></picture></a>
 </p>
+
+<p align="center"><sub>Arrow keys, WASD or hjkl on desktop · touch pad or drag on phones · your hi-score stays in your browser</sub></p>
 
 <details>
-<summary><b>⚙️ How it works</b> (event-driven, like the backends I build)</summary>
+<summary><b>⚙️ How it's built</b></summary>
 <br />
 
-1. Each arrow opens a pre-filled GitHub issue. That issue is the event.
-2. A GitHub Actions workflow picks it up (think Lambda), validates the move and applies it to the game state in [`arcade/state.json`](https://github.com/mohitpal2621/mohitpal2621/blob/main/arcade/state.json).
-3. It redraws the CRT screen as an SVG, commits it, replies on your issue and closes it.
-4. Moves that arrive at the same time retry against the latest state, so none get lost.
+- One HTML file, no libraries: a 160×108 pixel canvas scaled up crisply, retro sound effects synthesized with Web Audio, and keyboard, touch and drag controls
+- Levels are generated on the fly and flood-filled so every bug is reachable; bugs speed up each level and flee when you get close
+- The preview above is the game's own demo AI, recorded by a Python script into an animated SVG, because a README can't run JavaScript
 
 </details>
 
