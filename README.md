@@ -171,10 +171,10 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Comet.png" alt="☄️" width="28" height="28" /> Activity
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-light.svg" alt="My last year of GitHub contributions as a 3D skyline: one glowing pin per active day" width="100%" /></picture>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Rotate and zoom it in 3D"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-light.svg" alt="My last year of GitHub contributions as a slowly turning 3D skyline: one glowing pin per active day" width="100%" /></picture></a>
 </p>
 
-<p align="center"><sub>One pin per active day, redrawn every morning by a GitHub Action.</sub></p>
+<p align="center"><sub>One pin per active day, refreshed every 6 hours by a GitHub Action · <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/"><b>Rotate and zoom it in 3D</b></a></sub></p>
 
 <details>
 <summary><b>🐍 Psst, click to watch a snake eat my contribution graph</b></summary>
