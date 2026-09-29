@@ -76,8 +76,8 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000000-dark.svg" />
-    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000000-light.svg" alt="BUG HUNT arcade screen: a robot, bugs and server racks on a CRT, with a hi-score table" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000001-dark.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000001-light.svg" alt="BUG HUNT arcade screen: a robot, bugs and server racks on a CRT, with a hi-score table" width="100%" />
   </picture>
 </p>
 
