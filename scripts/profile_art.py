@@ -1,6 +1,7 @@
 """Profile art: a rotating dotted hologram sphere and a 3D contribution skyline.
 
-Writes hologram-{dark,light}.svg and skyline-{dark,light}.svg into OUT_DIR.
+Writes hologram-{dark,light}.svg and skyline-{dark,light}.svg into OUT_DIR, plus docs/skyline/data.json
+for the interactive 3D skyline page (override the path with SKYLINE_DATA, or set it empty to skip).
 Contributions come from the public calendar on the profile page (it includes private contribution
 counts when the profile shows them), falling back to the GraphQL API, or from a local JSON file.
 Usage: python3 profile_art.py OUT_DIR [calendar.json]
@@ -14,6 +15,7 @@ import sys
 import urllib.request
 
 NL = chr(10)
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace"
 REDUCED = "@media (prefers-reduced-motion: reduce){*{animation:none!important}}"
 EASE_OUT = "cubic-bezier(.61,1,.88,1)"
@@ -163,76 +165,106 @@ def hologram(t):
 
 
 def skyline(days, total, t):
-    W, H = 900, 300
+    """The last year as a 3D platform of days with a glowing pin on every active day.
+
+    The floor is drawn top-down, squashed into perspective and swayed with a CSS rotation; every pin
+    and label sits in a counter-rotated group, so it stays upright while it rides on the moving floor.
+    """
+    W, H = 900, 340
     first = datetime.date.fromisoformat(days[0][0])
     offset = (first.weekday() + 1) % 7
-    cells = []
-    for i, (ds, c) in enumerate(days):
-        idx = i + offset
-        cells.append((idx // 7, idx % 7, c, ds))
+    cells = [((i + offset) // 7, (i + offset) % 7, c, ds) for i, (ds, c) in enumerate(days)]
     nweeks = cells[-1][0] + 1
     maxc = max([c for _, _, c, _ in cells] + [1])
-    ew = (min(14.4, 760.0 / nweeks), 0.9)
-    ed = (6.6, -6.4)
-    x0, y0 = 46, 222
+    sp = min(13.0, 690.0 / max(nweeks - 1, 1))   # floor spacing between weeks and between weekdays
+    squash = 0.42                                 # sine of the camera pitch: how flat the floor looks
+    cx, cy = 452, 238                             # middle of the floor on screen
+    sway = (-15, 9)                               # degrees the floor swings between
+    scan = 9.0                                    # seconds per light sweep along the year
 
-    def pos(w, d):
-        return x0 + w * ew[0] + (6 - d) * ed[0], y0 + w * ew[1] + (6 - d) * ed[1]
+    def fx(w):
+        return (w - (nweeks - 1) / 2) * sp
 
-    floor, bars, labels = [], [], []
-    sweep = 3.2
+    def fz(d):
+        return (d - 3) * sp
+
+    def upright(inner):
+        return f'<g class="un"><g transform="scale(1 {1 / squash:.4f})">{inner}</g></g>'
+
+    x_first, x_last = fx(0), fx(nweeks - 1)
+    edge = fz(6) + 0.85 * sp
+    floor, ticks, labels, pins = [], [], [], []
     last_month = None
     for w in range(nweeks):
         wk = [c for c in cells if c[0] == w]
-        if wk:
-            sunday = datetime.date.fromisoformat(wk[0][3]) - datetime.timedelta(days=wk[0][1])
-            if sunday.month != last_month and w < nweeks - 2 and (last_month is not None or sunday.day <= 7):
-                lx, ly = pos(w, 6)
-                labels.append(f'<text class="lbl" x="{lx:.1f}" y="{ly + 20:.1f}">{sunday.strftime("%b")}</text>')
-            last_month = sunday.month
-    for d in range(7):
-        for w, dd, c, ds in cells:
-            if dd != d:
-                continue
-            px, py = pos(w, d)
-            if c == 0:
-                floor.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="1.3" fill="{t["soft"]}" fill-opacity=".3"/>')
-                continue
-            h = 14 + 136 * (c / maxc) ** 0.55
-            grow = w * 0.022 + (6 - d) * 0.01
-            pulse = 1.0 + (px - x0) / 780.0 * sweep
-            bars.append(
-                f'<g><title>{c} contribution{"s" if c != 1 else ""} on {ds}</title>'
-                f'<ellipse cx="{px:.1f}" cy="{py:.1f}" rx="4.5" ry="2" fill="{t["dot"]}" fill-opacity=".28"/>'
-                f'<rect class="bar" x="{px - 1.5:.1f}" y="{py - h:.1f}" width="3" height="{h:.1f}" fill="url(#barG)" style="animation-delay:{grow:.2f}s"/>'
-                f'<g class="cap" style="animation-delay:{grow + 0.9:.2f}s"><circle class="glow" cx="{px:.1f}" cy="{py - h:.1f}" r="6.5" fill="{t["dot"]}" style="animation-delay:{pulse:.2f}s"/></g>'
-                f'<circle class="cap" cx="{px:.1f}" cy="{py - h:.1f}" r="2.4" fill="{t["strong"]}" style="animation-delay:{grow + 0.9:.2f}s"/></g>'
+        if not wk:
+            continue
+        sunday = datetime.date.fromisoformat(wk[0][3]) - datetime.timedelta(days=wk[0][1])
+        if sunday.month != last_month and w < nweeks - 2 and (last_month is not None or sunday.day <= 7):
+            ticks.append(f"M{fx(w):.1f} {edge:.1f}v{0.45 * sp:.1f}")
+            text = f'<text class="lbl" y="13">{sunday.strftime("%b")}</text>'
+            labels.append(f'<g transform="translate({fx(w):.1f} {edge + 0.55 * sp:.1f})">{upright(text)}</g>')
+        last_month = sunday.month
+
+    mid = math.radians(sum(sway) / 2)
+    order = sorted(cells, key=lambda c: fx(c[0]) * math.sin(mid) + fz(c[1]) * math.cos(mid))
+    for w, d, c, ds in order:
+        px, pz = fx(w), fz(d)
+        if c == 0:
+            floor.append(f'<circle cx="{px:.1f}" cy="{pz:.1f}" r="1.8"/>')
+            continue
+        h = 14 + 112 * (c / maxc) ** 0.55
+        grow = w * 0.022 + (6 - d) * 0.01
+        flash = scan * (0.10 + 0.50 * (px - x_first) / max(x_last - x_first, 1)) - scan
+        pins.append(
+            f'<g transform="translate({px:.1f} {pz:.1f})"><title>{c} contribution{"s" if c != 1 else ""} on {ds}</title>'
+            f'<circle r="4.4" fill="{t["dot"]}" fill-opacity=".28"/>'
+            + upright(
+                f'<rect class="bar" x="-1.5" y="{-h:.1f}" width="3" height="{h:.1f}" fill="url(#barG)" style="animation-delay:{grow:.2f}s"/>'
+                f'<g class="cap" style="animation-delay:{grow + 0.9:.2f}s"><circle class="glow" cy="{-h:.1f}" r="6.5" fill="{t["dot"]}" style="animation-delay:{flash:.2f}s"/></g>'
+                f'<circle class="cap" cy="{-h:.1f}" r="2.4" fill="{t["strong"]}" style="animation-delay:{grow + 0.9:.2f}s"/>'
             )
+            + "</g>"
+        )
+
+    plate_x, plate_z = x_first - 0.9 * sp, fz(0) - 0.9 * sp
+    plate_w, plate_h = x_last - x_first + 1.8 * sp, 6 * sp + 1.8 * sp
     css = [
-        f".lbl{{font-family:{MONO};font-size:10.5px;fill:{t['text']}}}",
+        f".lbl{{font-family:{MONO};font-size:10.5px;fill:{t['text']};text-anchor:middle}}",
         f".hdr{{font-family:{MONO};font-size:12px;fill:{t['text']}}}",
+        f".cta{{font-family:{MONO};font-size:11px;fill:{t['soft']};text-anchor:end;opacity:.8}}",
+        f".spin{{animation:yaw 11s ease-in-out infinite alternate}}.un{{animation:unyaw 11s ease-in-out infinite alternate}}",
+        f"@keyframes yaw{{from{{transform:rotate({sway[0]}deg)}}to{{transform:rotate({sway[1]}deg)}}}}",
+        f"@keyframes unyaw{{from{{transform:rotate({-sway[0]}deg)}}to{{transform:rotate({-sway[1]}deg)}}}}",
         ".bar{transform-box:fill-box;transform-origin:50% 100%;animation:grow 1.3s cubic-bezier(.2,.8,.2,1) both}",
         "@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}",
-        ".cap{animation:capin .5s ease-out both}",
-        "@keyframes capin{from{opacity:0}to{opacity:1}}",
-        ".glow{opacity:.16;animation:pulse 9s ease-out infinite}",
-        "@keyframes pulse{0%,12%,100%{opacity:.16}3%{opacity:.6}}",
-        f".beam{{animation:beam 9s linear infinite}}",
-        f"@keyframes beam{{0%,11%{{transform:translateX(0)}}46%,100%{{transform:translateX({W + 160}px)}}}}",
+        ".cap{animation:capin .5s ease-out both}@keyframes capin{from{opacity:0}to{opacity:1}}",
+        f".glow{{opacity:.16;animation:pulse {scan:g}s linear infinite}}",
+        "@keyframes pulse{0%{opacity:.75}7%,100%{opacity:.16}}",
+        f".scan{{opacity:0;animation:scan {scan:g}s linear infinite}}",
+        f"@keyframes scan{{0%,10%{{transform:translateX({x_first:.1f}px);opacity:0}}13%,57%{{opacity:1}}"
+        f"60%,100%{{transform:translateX({x_last:.1f}px);opacity:0}}}}",
         REDUCED,
     ]
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
-  <title id="t">{total} contributions in the last year, drawn as a 3D skyline</title>
+  <title id="t">{total} contributions in the last year, drawn as a slowly turning 3D skyline</title>
   <style>{NL.join(css)}</style>
   <defs>
     <linearGradient id="barG" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="{t['dot']}" stop-opacity=".05"/><stop offset="1" stop-color="{t['dot']}" stop-opacity=".95"/></linearGradient>
-    <linearGradient id="beamG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{t['dot']}" stop-opacity="0"/><stop offset=".5" stop-color="{t['dot']}" stop-opacity=".09"/><stop offset="1" stop-color="{t['dot']}" stop-opacity="0"/></linearGradient>
+    <linearGradient id="scanG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{t['dot']}" stop-opacity="0"/><stop offset=".5" stop-color="{t['dot']}" stop-opacity=".2"/><stop offset="1" stop-color="{t['dot']}" stop-opacity="0"/></linearGradient>
   </defs>
-  <text class="hdr" x="{x0}" y="30">{total} contributions in the last year</text>
-  {"".join(floor)}
-  {"".join(labels)}
-  {"".join(bars)}
-  <rect class="beam" x="-160" y="40" width="120" height="{H - 50}" fill="url(#beamG)"/>
+  <text class="hdr" x="46" y="30">{total} contributions in the last year</text>
+  <text class="cta" x="{W - 46}" y="30">open in 3D &#8250;</text>
+  <g transform="translate({cx} {cy}) scale(1 {squash})">
+    <g class="spin">
+      <rect x="{plate_x:.1f}" y="{plate_z:.1f}" width="{plate_w:.1f}" height="{plate_h:.1f}" rx="{0.5 * sp:.1f}" fill="{t['dot']}" fill-opacity=".03" stroke="{t['soft']}" stroke-opacity=".22" vector-effect="non-scaling-stroke"/>
+      <g fill="{t['soft']}" fill-opacity=".34">{"".join(floor)}</g>
+      <path d="{"".join(ticks)}" stroke="{t['soft']}" stroke-opacity=".45" vector-effect="non-scaling-stroke"/>
+      <rect class="scan" x="{-1.3 * sp:.1f}" y="{plate_z:.1f}" width="{2.6 * sp:.1f}" height="{plate_h:.1f}" fill="url(#scanG)"/>
+      {"".join(pins)}
+      {"".join(labels)}
+    </g>
+  </g>
 </svg>
 """
 
@@ -254,6 +286,15 @@ def main():
         for name, svg in (("hologram", hologram(theme)), ("skyline", skyline(days, total, theme))):
             with open(os.path.join(out, f"{name}-{mode}.svg"), "w", encoding="utf-8") as fh:
                 fh.write(svg)
+    # the interactive 3D page (docs/skyline) reads the same numbers
+    data_path = os.environ.get("SKYLINE_DATA", os.path.join(ROOT, "docs", "skyline", "data.json"))
+    if data_path:
+        os.makedirs(os.path.dirname(data_path), exist_ok=True)
+        data = {"user": os.environ.get("GH_USER", ""), "updated": days[-1][0], "total": total,
+                "start": days[0][0], "counts": [c for _, c in days]}
+        with open(data_path, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, separators=(",", ":"))
+            fh.write(NL)
     print("wrote profile art for", len(days), "days,", total, "contributions")
 
 
