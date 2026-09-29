@@ -1,0 +1,45 @@
+name: Arcade
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  move:
+    if: startsWith(github.event.issue.title, 'arcade|')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      ISSUE_TITLE: ${{ github.event.issue.title }}
+      ISSUE_USER: ${{ github.event.issue.user.login }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Play the move
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+            python3 arcade/arcade.py move > "$RUNNER_TEMP/comment.md" || break
+            git add -A arcade README.md
+            git commit --quiet -m "Arcade: @$ISSUE_USER made a move" || break
+            if git push --quiet origin HEAD:main; then break; fi
+            sleep $((attempt * 3))
+          done
+
+      - name: Reply and close the issue
+        if: always()
+        run: |
+          if [ ! -s "$RUNNER_TEMP/comment.md" ]; then
+            echo "Something went wrong with that move. Please try again from https://github.com/mohitpal2621" > "$RUNNER_TEMP/comment.md"
+          fi
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+          gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY"
