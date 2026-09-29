@@ -446,7 +446,8 @@ def comment(state, user, direction, event, gained):
         "squash": f"@{user} moved **{direction}** and squashed a bug! **+{gained}**",
         "clear": f"@{user} squashed the last bug and cleared the level! **+{gained}** (level bonus included). Level {state['level']} is up.",
     }
-    board = f"Level {state['level']} · {len(state['bugs'])} bugs left · you have {state['scores'][user]} points."
+    pts = state["scores"][user]
+    board = f"Level {state['level']} · {len(state['bugs'])} bugs left · you have {pts} point{'s' if pts != 1 else ''}."
     return (f"🕹️ {lines[event]}{NL}{NL}{board}{NL}{NL}"
             f"The screen on https://github.com/mohitpal2621 refreshes in a few seconds. Thanks for playing!")
 
