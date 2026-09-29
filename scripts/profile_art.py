@@ -1,13 +1,15 @@
 """Profile art: a rotating dotted hologram sphere and a 3D contribution skyline.
 
 Writes hologram-{dark,light}.svg and skyline-{dark,light}.svg into OUT_DIR.
-Contributions come from the GitHub GraphQL API (GITHUB_TOKEN, GH_USER) or a local JSON file.
+Contributions come from the public calendar on the profile page (it includes private contribution
+counts when the profile shows them), falling back to the GraphQL API, or from a local JSON file.
 Usage: python3 profile_art.py OUT_DIR [calendar.json]
 """
 import datetime
 import json
 import math
 import os
+import re
 import sys
 import urllib.request
 
@@ -36,6 +38,29 @@ def fetch_days(user, token):
     cal = payload["data"]["user"]["contributionsCollection"]["contributionCalendar"]
     days = [(d["date"], d["contributionCount"]) for w in cal["weeks"] for d in w["contributionDays"]]
     return sorted(days), cal["totalContributions"]
+
+
+def fetch_days_calendar(user):
+    """Read the same calendar the profile page shows, including private contribution counts."""
+    req = urllib.request.Request(f"https://github.com/users/{user}/contributions",
+                                 headers={"User-Agent": "profile-art", "Accept": "text/html"})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        html = resp.read().decode("utf-8", "replace")
+    cells = {}
+    for tag in re.findall(r"<td\b[^>]*>", html):
+        date = re.search(r'data-date="(\d{4}-\d{2}-\d{2})"', tag)
+        cid = re.search(r'\bid="([^"]+)"', tag)
+        level = re.search(r'data-level="(\d)"', tag)
+        if date and cid:
+            cells[cid.group(1)] = [date.group(1), None, int(level.group(1)) if level else 0]
+    for cid, text in re.findall(r'<tool-tip\b[^>]*\bfor="([^"]+)"[^>]*>([^<]*)</tool-tip>', html):
+        if cid in cells:
+            m = re.match(r"\s*(\d+) contributions?", text)
+            cells[cid][1] = int(m.group(1)) if m else 0
+    days = sorted((d, c if c is not None else lvl) for d, c, lvl in cells.values())
+    if len(days) < 300:
+        raise ValueError(f"calendar parse found only {len(days)} days")
+    return days, sum(c for _, c in days)
 
 
 def hologram(t):
@@ -220,7 +245,11 @@ def main():
             data = json.load(fh)
         days, total = [(d["date"], d["count"]) for d in data["days"]], data["total"]
     else:
-        days, total = fetch_days(os.environ["GH_USER"], os.environ["GITHUB_TOKEN"])
+        try:
+            days, total = fetch_days_calendar(os.environ["GH_USER"])
+        except Exception as exc:  # fall back to GraphQL (public contributions only)
+            print("calendar page unavailable, using GraphQL:", exc)
+            days, total = fetch_days(os.environ["GH_USER"], os.environ["GITHUB_TOKEN"])
     for mode, theme in THEMES.items():
         for name, svg in (("hologram", hologram(theme)), ("skyline", skyline(days, total, theme))):
             with open(os.path.join(out, f"{name}-{mode}.svg"), "w", encoding="utf-8") as fh:
