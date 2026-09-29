@@ -14,12 +14,12 @@
 </p>
 
 <p align="center">
-  <a href="#about-me" title="Jump to About"><kbd>&nbsp;About&nbsp;</kbd></a>&nbsp;
-  <a href="#what-ive-shipped" title="Jump to Experience"><kbd>&nbsp;Experience&nbsp;</kbd></a>&nbsp;
-  <a href="#how-i-build" title="Jump to How I build"><kbd>&nbsp;How I build&nbsp;</kbd></a>&nbsp;
-  <a href="#tech-stack" title="Jump to Stack"><kbd>&nbsp;Stack&nbsp;</kbd></a>&nbsp;
-  <a href="#featured-projects" title="Jump to Projects"><kbd>&nbsp;Projects&nbsp;</kbd></a>&nbsp;
-  <a href="#lets-connect" title="Jump to Contact"><kbd>&nbsp;Contact&nbsp;</kbd></a>
+  <a href="#-about-me" title="Jump to About"><kbd>&nbsp;About&nbsp;</kbd></a>&nbsp;
+  <a href="#-what-ive-shipped" title="Jump to Experience"><kbd>&nbsp;Experience&nbsp;</kbd></a>&nbsp;
+  <a href="#-how-i-build" title="Jump to How I build"><kbd>&nbsp;How I build&nbsp;</kbd></a>&nbsp;
+  <a href="#-tech-stack" title="Jump to Stack"><kbd>&nbsp;Stack&nbsp;</kbd></a>&nbsp;
+  <a href="#-featured-projects" title="Jump to Projects"><kbd>&nbsp;Projects&nbsp;</kbd></a>&nbsp;
+  <a href="#-lets-connect" title="Jump to Contact"><kbd>&nbsp;Contact&nbsp;</kbd></a>
 </p>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Man%20Technologist.png" alt="🧑‍💻" width="28" height="28" /> About me
@@ -180,5 +180,5 @@ Always happy to talk serverless architecture, in-app payments or AI tooling.
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=Profile%20views&color=24292F&style=flat-square" alt="Profile views" />
   <br />
-  <sub><a href="#hey-im-mohit">Back to top ↑</a></sub>
+  <sub><a href="#hey-im-mohit-">Back to top ↑</a></sub>
 </p>
