@@ -16,15 +16,23 @@
 <p align="center">
   <a href="#-about-me" title="Jump to About"><kbd>&nbsp;About&nbsp;</kbd></a>&nbsp;
   <a href="#-what-ive-shipped" title="Jump to Experience"><kbd>&nbsp;Experience&nbsp;</kbd></a>&nbsp;
-  <a href="#-how-i-build" title="Jump to How I build"><kbd>&nbsp;How I build&nbsp;</kbd></a>&nbsp;
+  <a href="#-arcade" title="Jump to Arcade"><kbd>&nbsp;Arcade&nbsp;</kbd></a>&nbsp;
   <a href="#-tech-stack" title="Jump to Stack"><kbd>&nbsp;Stack&nbsp;</kbd></a>&nbsp;
   <a href="#-featured-projects" title="Jump to Projects"><kbd>&nbsp;Projects&nbsp;</kbd></a>&nbsp;
+  <a href="#-activity" title="Jump to Activity"><kbd>&nbsp;Activity&nbsp;</kbd></a>&nbsp;
   <a href="#-lets-connect" title="Jump to Contact"><kbd>&nbsp;Contact&nbsp;</kbd></a>
 </p>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Man%20Technologist.png" alt="🧑‍💻" width="28" height="28" /> About me
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/hologram-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/hologram-light.svg" alt="Rotating dotted hologram globe" width="230" align="right" /></picture>
+
 I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of shipping production systems. I design **serverless, event-driven services on AWS**, own features **end to end across web and mobile**, and build **RL environments and verifiers for AI coding agents**.
+
+- 🔭 **Now:** Software Engineer at **4 Way Technologies**, building **SpicyChat** and **PixelChat** for NextDay AI
+- 🤖 **Also:** contract work with **Handshake AI** on agentic coding tasks and RL environments in Python
+- 🎓 **Education:** B.Tech CSE, Maharaja Agrasen Institute of Technology, Delhi (2024) · CGPA 8.7
+- 📍 **Based in:** Gurgaon, India
 
 <p align="center">
   <picture>
@@ -32,11 +40,6 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
     <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/terminal-light.svg" alt="Animated terminal. whoami: Mohit Pal, Software Engineer, Gurgaon, India. focus: serverless, event-driven backends on AWS; iOS and Android in-app payments; RL environments and verifiers for AI coding agents. stack: node, nestjs, typescript, python, lambda, dynamodb, eventbridge, sqs, react-native" width="100%" />
   </picture>
 </p>
-
-- 🔭 **Now:** Software Engineer at **4 Way Technologies**, building **SpicyChat** and **PixelChat** for NextDay AI
-- 🤖 **Also:** contract work with **Handshake AI** on agentic coding tasks and RL environments in Python
-- 🎓 **Education:** B.Tech CSE, Maharaja Agrasen Institute of Technology, Delhi (2024) · CGPA 8.7
-- 📍 **Based in:** Gurgaon, India
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="🚀" width="28" height="28" /> What I've shipped
 
@@ -67,27 +70,33 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 
 </details>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" alt="⚡" width="28" height="28" /> How I build
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Joystick.png" alt="🕹️" width="28" height="28" /> Arcade
 
-A typical serverless, event-driven flow I design and ship, simplified. Hover the diagram for zoom and pan controls.
+**BUG HUNT**: help the robot squash bugs before they ship to prod. Tap an arrow, press **Create** on the issue that opens, and your move lands in about 30 seconds. Every squash puts you on the leaderboard.
 
-```mermaid
-flowchart TB
-    subgraph SUBS["💳 Subscriptions"]
-        direction LR
-        stores["🛒 App Store & Google Play"] -->|receipts & lifecycle events| pubsub["GCP Pub/Sub"]
-    end
-    subgraph REQ["⚡ Request path"]
-        direction LR
-        client["📱 Mobile & web apps"] -->|HTTPS| apigw["API Gateway"] --> fn["λ Lambda · Node.js / TypeScript"] --> ddb[("DynamoDB")]
-    end
-    subgraph ASYNC["🔁 Event-driven background work"]
-        direction LR
-        bus{{"EventBridge"}} --> queue["SQS"] --> workers["λ Worker Lambdas"] --> flow["Step Functions"]
-    end
-    SUBS -->|validated server-side| REQ
-    REQ -->|domain events| ASYNC
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000000-dark.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/screen-000000-light.svg" alt="BUG HUNT arcade screen: a robot, bugs and server racks on a CRT, with a hi-score table" width="100%" />
+  </picture>
+</p>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/blank.svg" width="48" height="48" alt="" /><a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cup&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move up"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/up-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/up-light.svg" alt="Up" width="48" height="48" /></picture></a><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/blank.svg" width="48" height="48" alt="" /><br />
+<a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cleft&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move left"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/left-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/left-light.svg" alt="Left" width="48" height="48" /></picture></a><a href="https://github.com/mohitpal2621?tab=overview&amp;arcade=refresh#-arcade" title="Refresh the screen"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/refresh-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/refresh-light.svg" alt="Refresh" width="48" height="48" /></picture></a><a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cright&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move right"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/right-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/right-light.svg" alt="Right" width="48" height="48" /></picture></a><br />
+<img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/blank.svg" width="48" height="48" alt="" /><a href="https://github.com/mohitpal2621/mohitpal2621/issues/new?title=arcade%7Cdown&body=Just%20press%20%2A%2ACreate%2A%2A%20below.%20The%20robot%20makes%20your%20move%20in%20about%2030%20seconds%2C%20then%20head%20back%20to%20https%3A//github.com/mohitpal2621%20to%20see%20the%20board.%0A%0AThanks%20for%20playing%21%20%F0%9F%95%B9%EF%B8%8F" title="Move down"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/down-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/down-light.svg" alt="Down" width="48" height="48" /></picture></a><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/arcade/buttons/blank.svg" width="48" height="48" alt="" />
+</p>
+
+<details>
+<summary><b>⚙️ How it works</b> (event-driven, like the backends I build)</summary>
+<br />
+
+1. Each arrow opens a pre-filled GitHub issue. That issue is the event.
+2. A GitHub Actions workflow picks it up (think Lambda), validates the move and applies it to the game state in [`arcade/state.json`](https://github.com/mohitpal2621/mohitpal2621/blob/main/arcade/state.json).
+3. It redraws the CRT screen as an SVG, commits it, replies on your issue and closes it.
+4. Moves that arrive at the same time retry against the latest state, so none get lost.
+
+</details>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="🛠️" width="28" height="28" /> Tech stack
 
@@ -155,6 +164,14 @@ flowchart TB
 
 > [!NOTE]
 > Most of my production work lives in private client repositories. Happy to walk through the architecture in a conversation.
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Comet.png" alt="☄️" width="28" height="28" /> Activity
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-light.svg" alt="My last year of GitHub contributions as a 3D skyline: one glowing pin per active day" width="100%" /></picture>
+</p>
+
+<p align="center"><sub>One pin per active day, redrawn every morning by a GitHub Action.</sub></p>
 
 <details>
 <summary><b>🐍 Psst, click to watch a snake eat my contribution graph</b></summary>
