@@ -4,246 +4,241 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Contribution Skyline · Mohit Pal</title>
-<meta name="description" content="Mohit Pal's last year on GitHub as an interactive 3D skyline. Drag to rotate, scroll to zoom, right-drag to move it around.">
+<meta name="description" content="Mohit Pal's GitHub contributions as an interactive 3D skyline. Pick any date range, then drag to rotate and scroll to zoom.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contribution Skyline · Mohit Pal">
-<meta property="og:description" content="A year of GitHub contributions as an interactive 3D skyline you can rotate and zoom.">
-<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><g fill='%238b949e'><rect x='2.2' y='7' width='1.6' height='7' rx='.8'/><rect x='7.2' y='3' width='1.6' height='11' rx='.8'/><rect x='12.2' y='5' width='1.6' height='9' rx='.8'/><circle cx='3' cy='6' r='1.7'/><circle cx='8' cy='2.2' r='1.7'/><circle cx='13' cy='4.2' r='1.7'/></g></svg>">
+<meta property="og:description" content="GitHub contributions as a 3D skyline you can rotate, zoom and filter by date.">
+<meta name="theme-color" content="#0c1022">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'><rect x='2' y='8' width='2' height='6' fill='%23238636'/><rect x='7' y='3' width='2' height='11' fill='%237ee787'/><rect x='12' y='6' width='2' height='8' fill='%233fb950'/><rect x='1' y='6' width='4' height='3' fill='%23238636'/><rect x='6' y='1' width='4' height='3' fill='%237ee787'/><rect x='11' y='4' width='4' height='3' fill='%233fb950'/></svg>">
 <style>
   :root {
     color-scheme: dark;
-    --bg: #0d1117; --panel: #161b22; --stage: #0b0f14; --edge: #30363d; --text: #e6edf3; --muted: #8b949e;
-    --btn: rgba(33, 38, 45, .82); --btn-edge: #30363d; --btn-hover: #2a3038;
-    --dot: #b4c4d8; --soft: #8b949e; --strong: #f0f6fc; --halo: rgba(180, 196, 216, .08);
-  }
-  @media (prefers-color-scheme: light) {
-    :root {
-      color-scheme: light;
-      --bg: #ffffff; --panel: #f6f8fa; --stage: #fbfcfd; --edge: #d0d7de; --text: #1f2328; --muted: #59636e;
-      --btn: rgba(255, 255, 255, .86); --btn-edge: #d0d7de; --btn-hover: #eff2f5;
-      --dot: #3d4b5c; --soft: #6e7781; --strong: #1f2328; --halo: rgba(61, 75, 92, .07);
-    }
+    --bg: #0c1022; --panel: #111a30; --panel2: #1b2742; --edge: #3d4f75; --text: #f0f6fc; --muted: #c2c3c7; --dim: #8b949e;
+    --accent: #7ee787; --accent2: #2ea043;
   }
   * { box-sizing: border-box; }
-  html { background: var(--bg); }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
   body {
-    margin: 0; background: var(--bg); color: var(--text); -webkit-text-size-adjust: 100%;
-    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .05) 1px, transparent 0) 0 0 / 16px 16px, var(--bg);
   }
-  main { max-width: 1060px; margin: 0 auto; padding: max(12px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom)); }
-  .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 36px; margin-bottom: 10px; }
-  .back { color: var(--muted); text-decoration: none; font-size: 13px; }
-  .back:hover { color: var(--text); }
-  .brand { font-size: 12px; font-weight: 600; letter-spacing: .2em; color: var(--muted); }
-  .intro { margin: 6px 0 16px; }
-  h1 { margin: 0; font-size: clamp(21px, 3.3vw, 28px); font-weight: 600; letter-spacing: -.01em; line-height: 1.25; }
-  h1 .num { font-variant-numeric: tabular-nums; }
-  .sub { margin: 6px 0 0; color: var(--muted); max-width: 640px; }
+  .px { font-family: "Press Start 2P", ui-monospace, Menlo, Consolas, monospace; }
+  main { max-width: 1080px; margin: 0 auto; padding: max(12px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom)); }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 36px; margin-bottom: 8px; }
+  .top a { color: var(--muted); text-decoration: none; font-size: 13px; }
+  .top a:hover { color: var(--text); }
+  h1 { margin: 8px 0 6px; font-size: clamp(15px, 2.6vw, 22px); line-height: 1.5; font-weight: 400; }
+  h1 .num { color: var(--accent); text-shadow: 0 3px 0 #0f5323; }
+  .sub { margin: 0 0 14px; color: var(--muted); max-width: 720px; }
 
-  .stage {
-    position: relative; overflow: hidden; border: 1px solid var(--edge); border-radius: 16px;
-    background: radial-gradient(85% 70% at 50% 42%, var(--halo), transparent 72%), var(--stage);
+  .ranges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 12px; }
+  .ranges .label { color: var(--muted); font-size: 9px; margin-right: 4px; }
+  .chip {
+    height: 34px; padding: 0 12px; border: 2px solid #000; background: var(--panel2); color: var(--text); cursor: pointer;
+    font-size: 9px; box-shadow: 3px 3px 0 #000; -webkit-tap-highlight-color: transparent;
   }
+  .chip:hover { filter: brightness(1.2); }
+  .chip:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #000; }
+  .chip[aria-pressed="true"] { background: var(--accent); color: #04260f; }
+  .chip:focus-visible, .tool:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .custom { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-left: auto; }
+  .custom label { font-size: 9px; color: var(--muted); }
+  .custom input {
+    height: 34px; padding: 0 8px; border: 2px solid #000; background: var(--panel); color: var(--text);
+    font: 13px ui-monospace, Menlo, Consolas, monospace; color-scheme: dark; box-shadow: 3px 3px 0 #000;
+  }
+
+  .stage { position: relative; overflow: hidden; border: 3px solid var(--edge); background: radial-gradient(90% 75% at 50% 42%, #18233f, #0f1629 70%); box-shadow: 0 0 0 3px #000, 8px 8px 0 3px rgba(0, 0, 0, .5); }
   canvas {
-    display: block; width: 100%; height: clamp(340px, 46vw, 520px); touch-action: none; cursor: grab; outline: none;
+    display: block; width: 100%; height: clamp(360px, 48vw, 540px); touch-action: none; cursor: grab; outline: none;
     -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent;
   }
   canvas.dragging { cursor: grabbing; }
   canvas.on-pin { cursor: pointer; }
-  canvas:focus-visible { box-shadow: inset 0 0 0 2px var(--muted); border-radius: 16px; }
-  .hint {
-    position: absolute; top: 12px; right: 14px; margin: 0; color: var(--muted); font-size: 11px; letter-spacing: .08em;
-    pointer-events: none; text-align: right;
-  }
+  .hint { position: absolute; top: 12px; right: 14px; margin: 0; color: var(--muted); font-size: 8px; pointer-events: none; text-align: right; line-height: 2; }
+  .legend { position: absolute; top: 12px; left: 14px; display: flex; align-items: center; gap: 6px; font-size: 8px; color: var(--muted); pointer-events: none; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border: 1px solid #000; }
   .tip {
     position: absolute; left: 0; top: 0; pointer-events: none; transform: translate(-50%, calc(-100% - 16px));
-    background: var(--panel); border: 1px solid var(--edge); border-radius: 8px; padding: 6px 10px; font-size: 12px;
-    white-space: nowrap; box-shadow: 0 8px 24px rgba(1, 4, 9, .28);
+    background: var(--panel); border: 2px solid var(--text); padding: 6px 10px; font-size: 12px; white-space: nowrap; box-shadow: 4px 4px 0 #000;
   }
-  .tip b { display: block; font-weight: 600; }
-  .tip span { color: var(--muted); }
+  .tip b { display: block; font-weight: 600; color: var(--accent); }
   .controls { position: absolute; left: 12px; bottom: 12px; right: 12px; display: flex; flex-wrap: wrap; gap: 8px; pointer-events: none; }
-  .pill {
-    pointer-events: auto; display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px; border-radius: 16px;
-    border: 1px solid var(--btn-edge); background: var(--btn); color: var(--text); cursor: pointer;
-    font: 600 11px/1 ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; letter-spacing: .08em;
-    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); -webkit-tap-highlight-color: transparent;
-    transition: background-color .12s ease;
+  .tool {
+    pointer-events: auto; display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px;
+    border: 2px solid #000; background: var(--panel2); color: var(--text); cursor: pointer; font-size: 8px; box-shadow: 3px 3px 0 #000;
   }
-  @media (hover: hover) { .pill:hover { background: var(--btn-hover); } }
-  .pill:focus-visible, .back:focus-visible { outline: 2px solid var(--muted); outline-offset: 2px; }
-  .pill svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .pill .solid { fill: currentColor; stroke: none; }
-  .pill[aria-pressed="false"] { color: var(--muted); }
+  .tool:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #000; }
+  .tool svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; }
+  .tool .solid { fill: currentColor; stroke: none; }
+  .tool[aria-pressed="false"] { color: var(--dim); }
 
-  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
-  .stat { border: 1px solid var(--edge); border-radius: 12px; padding: 12px 14px; background: var(--panel); min-width: 0; }
-  .stat .k { display: block; color: var(--muted); font-size: 12px; }
-  .stat .v { display: block; margin-top: 2px; font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .stat .v small { color: var(--muted); font-size: 13px; font-weight: 400; }
-  footer { margin-top: 22px; text-align: center; color: var(--muted); font-size: 12px; }
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+  .stat { border: 2px solid #000; padding: 12px 14px; background: var(--panel); min-width: 0; box-shadow: 4px 4px 0 #000; }
+  .stat .k { display: block; color: var(--muted); font-size: 8px; }
+  .stat .v { display: block; margin-top: 8px; font-size: 18px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .stat .v small { color: var(--muted); font-size: 12px; font-weight: 400; }
+  .stat .v { color: var(--text); }
+  footer { margin-top: 24px; text-align: center; color: var(--muted); font-size: 12px; }
   footer a { color: var(--muted); }
   footer a:hover { color: var(--text); }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   .touch-only { display: none; }
   @media (hover: none) and (pointer: coarse) { .touch-only { display: inline; } .desk-only { display: none; } }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .hint { display: none; }
+    .custom { margin-left: 0; }
   }
   @media (max-width: 560px) {
-    canvas { height: clamp(400px, 118vw, 520px); }
+    canvas { height: clamp(380px, 110vw, 520px); }
     .controls { justify-content: flex-end; }
-    .pill { width: 38px; height: 38px; padding: 0; justify-content: center; border-radius: 19px; }
-    .pill .lbl { display: none; }
-    .pill svg { width: 16px; height: 16px; }
+    .tool { width: 40px; height: 40px; padding: 0; justify-content: center; }
+    .tool .lbl { display: none; }
   }
 </style>
 </head>
 <body>
 <main>
   <header class="top">
-    <a class="back" href="https://github.com/mohitpal2621">&larr; github.com/mohitpal2621</a>
-    <span class="brand mono">SKYLINE</span>
+    <a href="https://github.com/mohitpal2621">&larr; github.com/mohitpal2621</a>
+    <a href="../" class="px" style="font-size:9px">&#9654; PLAY PUSH TO PROD</a>
   </header>
 
-  <section class="intro">
-    <h1><span class="num mono" id="total">&hellip;</span> contributions in the last year</h1>
-    <p class="sub">One glowing pin per active day, taller on busier days.
-      <span class="desk-only">Drag to rotate, scroll to zoom and right-drag to move it around.</span>
-      <span class="touch-only">Drag to rotate, pinch to zoom and use two fingers to move it around.</span>
-      Tap or hover a pin for the date.</p>
-  </section>
+  <h1 class="px"><span class="num" id="total">&hellip;</span> contributions <span id="rangeName">in the last 12 months</span></h1>
+  <p class="sub">Each pin is a day I contributed on GitHub; taller and brighter green means a busier day. Pick a range below.
+    <span class="desk-only">Drag to rotate, scroll to zoom, right-drag to move it.</span>
+    <span class="touch-only">Drag to rotate, pinch to zoom.</span> Hover or tap a pin for its date.</p>
+
+  <div class="ranges" role="group" aria-label="Date range">
+    <span class="label px">RANGE</span>
+    <span id="chips" style="display:contents"></span>
+    <div class="custom">
+      <label class="px" for="from">FROM</label><input type="date" id="from">
+      <label class="px" for="to">TO</label><input type="date" id="to">
+    </div>
+  </div>
 
   <div class="stage" id="stage">
     <canvas id="sky" tabindex="0" role="img" aria-label="Contribution skyline"></canvas>
-    <p class="hint mono desk-only" aria-hidden="true">DRAG &middot; ROTATE &nbsp;&nbsp; SCROLL &middot; ZOOM &nbsp;&nbsp; RIGHT-DRAG &middot; PAN</p>
+    <div class="legend px" aria-hidden="true">LESS <i style="background:#1f6f3a"></i><i style="background:#238636"></i><i style="background:#2ea043"></i><i style="background:#3fb950"></i><i style="background:#7ee787"></i> MORE</div>
+    <p class="hint px desk-only" aria-hidden="true">DRAG: ROTATE<br>SCROLL: ZOOM</p>
     <div class="tip" id="tip" hidden><b id="tipDate"></b><span id="tipCount"></span></div>
     <div class="controls">
-      <button class="pill" type="button" id="spinBtn" aria-pressed="true" aria-label="Auto-rotate">
+      <button class="tool px" type="button" id="spinBtn" aria-pressed="true" aria-label="Auto-rotate">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v5h-5"/></svg><span class="lbl">AUTO-ROTATE</span></button>
-      <button class="pill" type="button" id="replayBtn" aria-label="Replay the year">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="solid" d="M8 5.5v13l10.5-6.5z"/></svg><span class="lbl">REPLAY YEAR</span></button>
-      <button class="pill" type="button" id="resetBtn" aria-label="Reset the view">
+      <button class="tool px" type="button" id="replayBtn" aria-label="Replay">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="solid" d="M8 5.5v13l10.5-6.5z"/></svg><span class="lbl">REPLAY</span></button>
+      <button class="tool px" type="button" id="resetBtn" aria-label="Reset the view">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="lbl">RESET VIEW</span></button>
     </div>
   </div>
 
   <section class="stats" aria-label="Highlights">
-    <div class="stat"><span class="k">Active days</span><span class="v" id="sActive">&ndash;</span></div>
-    <div class="stat"><span class="k">Longest streak</span><span class="v" id="sStreak">&ndash;</span></div>
-    <div class="stat"><span class="k">Busiest day</span><span class="v" id="sBusy">&ndash;</span></div>
-    <div class="stat"><span class="k">Most active month</span><span class="v" id="sMonth">&ndash;</span></div>
+    <div class="stat"><span class="k px">ACTIVE DAYS</span><span class="v" id="sActive">&ndash;</span></div>
+    <div class="stat"><span class="k px">BEST STREAK</span><span class="v" id="sStreak">&ndash;</span></div>
+    <div class="stat"><span class="k px">BUSIEST DAY</span><span class="v" id="sBusy">&ndash;</span></div>
+    <div class="stat"><span class="k px">BUSIEST MONTH</span><span class="v" id="sMonth">&ndash;</span></div>
   </section>
   <ul class="sr-only" id="srList" aria-label="Active days"></ul>
 
   <footer>
-    <span id="updated">Refreshed</span> from my GitHub contribution calendar by a GitHub Action.
-    Rendered from scratch on a canvas, no libraries &middot;
-    <a href="https://github.com/mohitpal2621/mohitpal2621/blob/main/docs/skyline/index.html">source</a> &middot;
-    <a href="../">play BUG HUNT</a>
+    <span id="updated">Refreshed</span> from my GitHub contribution calendar by a GitHub Action every 6 hours.
+    Drawn from scratch on a canvas, no libraries &middot;
+    <a href="https://github.com/mohitpal2621/mohitpal2621/blob/main/docs/skyline/index.html">source</a>
   </footer>
 </main>
 
-<script type="application/json" id="fallback">{"user":"mohitpal2621","updated":"2026-09-29","total":32,"start":"2025-09-28","counts":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3]}</script>
+<script type="application/json" id="fallback">{"user":"mohitpal2621","updated":"2026-09-29","total":0,"start":"2025-09-28","counts":[0]}</script>
 <script>
 (() => {
   "use strict";
   const $ = id => document.getElementById(id);
-  const canvas = $("sky"), g = canvas.getContext("2d"), stage = $("stage"), tip = $("tip");
-  const mq = q => !!(window.matchMedia && window.matchMedia(q).matches);
-  const REDUCED = mq("(prefers-reduced-motion: reduce)");
+  const canvas = $("sky"), g = canvas.getContext("2d"), tip = $("tip");
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const lerp = (a, b, t) => a + (b - a) * t;
   const easeInOut = t => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
   const easeOutBack = t => (t >= 1 ? 1 : 1 + 2.4 * Math.pow(t - 1, 3) + 1.4 * Math.pow(t - 1, 2));
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const DAY = 864e5, REPLAY_MS = 3800, GROW_MS = 560, SCAN_MS = 9000;
-  const DMIN = 14, DMAX = 170;
-
-  // ------------------------------------------------------------ colours from CSS
-  const C = {};
-  let glow = null;
+  const DAY = 864e5, REPLAY_MS = 3600, GROW_MS = 520, SCAN_MS = 9000, DMIN = 10, DMAX = 260;
+  const LEVELS = [[31, 111, 58], [35, 134, 54], [46, 160, 67], [63, 185, 80], [126, 231, 135]];
   const rgba = (c, a) => "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + a + ")";
-  function hex(v) {
-    let h = v.trim().replace("#", "");
-    if (h.length === 3) h = h.split("").map(ch => ch + ch).join("");
-    const n = parseInt(h, 16);
-    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
-  }
-  function readColors() {
-    const cs = getComputedStyle(document.documentElement);
-    for (const k of ["dot", "soft", "strong"]) C[k] = hex(cs.getPropertyValue("--" + k) || "#8b949e");
-    glow = document.createElement("canvas");
-    glow.width = glow.height = 64;
-    const gg = glow.getContext("2d"), rad = gg.createRadialGradient(32, 32, 0, 32, 32, 32);
-    rad.addColorStop(0, rgba(C.dot, 0.6));
-    rad.addColorStop(0.3, rgba(C.dot, 0.2));
-    rad.addColorStop(1, rgba(C.dot, 0));
-    gg.fillStyle = rad;
-    gg.fillRect(0, 0, 64, 64);
-  }
-  readColors();
-  if (window.matchMedia) {
-    const scheme = window.matchMedia("(prefers-color-scheme: dark)");
-    const onScheme = () => { readColors(); dirty = true; };
-    if (scheme.addEventListener) scheme.addEventListener("change", onScheme); else if (scheme.addListener) scheme.addListener(onScheme);
-  }
+  const SOFT = [194, 195, 199], DIM = [90, 107, 143], WHITE = [255, 241, 232], EDGE = [61, 79, 117];
+  const glows = LEVELS.map(c => {
+    const cv = document.createElement("canvas"); cv.width = cv.height = 64;
+    const gg = cv.getContext("2d"), rad = gg.createRadialGradient(32, 32, 0, 32, 32, 32);
+    rad.addColorStop(0, rgba(c, 0.7)); rad.addColorStop(0.3, rgba(c, 0.22)); rad.addColorStop(1, rgba(c, 0));
+    gg.fillStyle = rad; gg.fillRect(0, 0, 64, 64);
+    return cv;
+  });
 
-  // ------------------------------------------------------------ data
+  // ------------------------------------------------------------ data + ranges
+  let all = null;            // { start: ms, counts: [] } for every day since the account started
   let days = [], pins = [], months = [], N = 53, total = 0, cumWeek = [];
-  function load(data) {
-    const start = Date.parse(data.start + "T00:00:00Z");
-    const offset = new Date(start).getUTCDay();
-    const counts = data.counts.map(c => Math.max(0, c | 0));
-    days = counts.map((c, i) => {
+  const iso = t => new Date(t).toISOString().slice(0, 10);
+  const parse = s => Date.parse(s + "T00:00:00Z");
+  function countOn(t) { const i = Math.round((t - all.start) / DAY); return i >= 0 && i < all.counts.length ? all.counts[i] : 0; }
+
+  function show(fromT, toT, label) {
+    if (toT < fromT) [fromT, toT] = [toT, fromT];
+    const offset = new Date(fromT).getUTCDay();
+    days = [];
+    for (let t = fromT, i = 0; t <= toT; t += DAY, i++) {
       const idx = i + offset;
-      return { t: start + i * DAY, c, w: Math.floor(idx / 7), d: idx % 7 };
-    });
-    N = days.length ? days[days.length - 1].w + 1 : 53;
-    const maxc = Math.max(1, ...counts);
-    total = counts.reduce((a, b) => a + b, 0);
-    for (const x of days) { x.X = x.w - (N - 1) / 2; x.Z = x.d - 3; }
+      days.push({ t, c: countOn(t), w: Math.floor(idx / 7), d: idx % 7 });
+    }
+    N = days.length ? days[days.length - 1].w + 1 : 1;
+    const maxc = Math.max(1, ...days.map(x => x.c));
+    total = days.reduce((a, x) => a + x.c, 0);
+    const zs = N > 20 ? 1.5 : 1;
+    for (const x of days) { x.X = x.w - (N - 1) / 2; x.Z = (x.d - 3) * zs; }
     pins = days.filter(x => x.c > 0);
-    for (const p of pins) p.h = 0.9 + 8.1 * Math.pow(p.c / maxc, 0.55);
+    for (const p of pins) {
+      p.h = 0.9 + (N > 20 ? 8.1 : 6.5) * Math.pow(p.c / maxc, 0.6);
+      p.lv = Math.min(4, Math.ceil(p.c / maxc * 5) - 1);
+    }
     cumWeek = new Array(N).fill(0);
     for (const x of days) cumWeek[x.w] += x.c;
     for (let w = 1; w < N; w++) cumWeek[w] += cumWeek[w - 1];
-
-    months = [];
-    let last = null;
+    // month labels at least three weeks apart
+    const marks = []; let last = null;
     for (let w = 0; w < N; w++) {
-      const first = days.find(x => x.w === w);
-      if (!first) continue;
-      const sunday = new Date(first.t - first.d * DAY);
-      const m = sunday.getUTCMonth();
-      if (m !== last && w < N - 2 && (last !== null || sunday.getUTCDate() <= 7)) {
-        months.push({ X: w - (N - 1) / 2, label: MONTHS[m] });
-      }
+      const wk = days.filter(x => x.w === w);
+      if (!wk.length) continue;
+      const m = new Date(wk[wk.length - 1].t).getUTCMonth();
+      if (m !== last) marks.push({ w, m, y: new Date(wk[wk.length - 1].t).getUTCFullYear() });
       last = m;
     }
-    stats(data);
+    if (marks.length > 1 && marks[1].w - marks[0].w < 3) marks.shift();
+    months = [];
+    const multiYear = new Date(fromT).getUTCFullYear() !== new Date(toT).getUTCFullYear() && N > 60;
+    for (const mk of marks) {
+      if (months.length && mk.w - months[months.length - 1].w < (N > 120 ? 8 : 3)) continue;
+      months.push({ w: mk.w, X: mk.w - (N - 1) / 2, label: MONTHS[mk.m] + (multiYear && mk.m === 0 ? " " + String(mk.y).slice(2) : "") });
+    }
+    $("from").value = iso(fromT); $("to").value = iso(toT);
+    $("rangeName").textContent = label;
+    stats();
     fit(true);
+    replay();
   }
 
   function fmtDay(t, withYear) {
     return new Date(t).toLocaleDateString("en-US", withYear
       ? { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }
-      : { month: "short", day: "numeric", timeZone: "UTC" });
+      : { month: "short", day: "numeric", year: undefined, timeZone: "UTC" });
   }
-  function stats(data) {
+  function stats() {
     const active = pins.length;
     let best = 0, run = 0;
     for (const x of days) { run = x.c > 0 ? run + 1 : 0; best = Math.max(best, run); }
     const top = days.reduce((a, b) => (b.c > a.c ? b : a), days[0] || { c: 0 });
     const byMonth = new Map();
-    for (const x of days) {
-      const d = new Date(x.t), k = d.getUTCFullYear() * 12 + d.getUTCMonth();
-      byMonth.set(k, (byMonth.get(k) || 0) + x.c);
-    }
+    for (const x of days) { const d = new Date(x.t), k = d.getUTCFullYear() * 12 + d.getUTCMonth(); byMonth.set(k, (byMonth.get(k) || 0) + x.c); }
     let bm = null, bc = 0;
     for (const [k, v] of byMonth) if (v > bc) { bm = k; bc = v; }
     const small = s => " <small>" + s + "</small>";
@@ -252,28 +247,58 @@
     $("sStreak").innerHTML = best + small(best === 1 ? "day" : "days");
     $("sBusy").innerHTML = top.c ? fmtDay(top.t, false) + small("&middot; " + top.c) : "&ndash;";
     $("sMonth").innerHTML = bm !== null ? MONTHS[bm % 12] + " " + Math.floor(bm / 12) + small("&middot; " + bc) : "&ndash;";
-    if (data.updated) {
-      const u = Date.parse(data.updated + (data.updated.length === 10 ? "T00:00:00Z" : ""));
-      if (!isNaN(u)) $("updated").textContent = "Refreshed " + fmtDay(u, false) + ",";
-    }
-    canvas.setAttribute("aria-label", total + " contributions in the last year across " + active +
-      " active days, drawn as a 3D skyline. Use the arrow keys to rotate, plus and minus to zoom, 0 to reset.");
-    const list = $("srList");
-    list.textContent = "";
-    for (const p of pins) {
-      const li = document.createElement("li");
-      li.textContent = fmtDay(p.t, true) + ": " + p.c + (p.c === 1 ? " contribution" : " contributions");
-      list.appendChild(li);
-    }
+    canvas.setAttribute("aria-label", total + " contributions " + $("rangeName").textContent + " across " + active + " active days, drawn as a 3D skyline. Arrow keys rotate, plus and minus zoom, 0 resets.");
+    const list = $("srList"); list.textContent = "";
+    for (const p of pins) { const li = document.createElement("li"); li.textContent = fmtDay(p.t, true) + ": " + p.c + (p.c === 1 ? " contribution" : " contributions"); list.appendChild(li); }
   }
+
+  // the range buttons
+  let presets = [];
+  function buildPresets() {
+    const today = all.start + (all.counts.length - 1) * DAY;
+    const y = new Date(today).getUTCFullYear(), y0 = new Date(all.start).getUTCFullYear();
+    presets = [
+      { id: "30d", label: "30 DAYS", name: "in the last 30 days", from: today - 29 * DAY, to: today },
+      { id: "90d", label: "90 DAYS", name: "in the last 90 days", from: today - 89 * DAY, to: today },
+      { id: "12m", label: "12 MONTHS", name: "in the last 12 months", from: today - 364 * DAY, to: today },
+    ];
+    for (let yy = y; yy >= y0; yy--) {
+      const from = Math.max(all.start, Date.UTC(yy, 0, 1)), to = Math.min(today, Date.UTC(yy, 11, 31));
+      presets.push({ id: String(yy), label: String(yy), name: yy === y ? "in " + yy + " so far" : "in " + yy, from, to });
+    }
+    if (y0 < y) presets.push({ id: "all", label: "ALL TIME", name: "since " + y0, from: all.start, to: today });
+    const host = $("chips"); host.textContent = "";
+    for (const p of presets) {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip px"; b.textContent = p.label; b.dataset.id = p.id; b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", () => pick(p.id));
+      host.appendChild(b);
+    }
+    $("from").min = $("to").min = iso(all.start);
+    $("from").max = $("to").max = iso(today);
+  }
+  function pick(id) {
+    const p = presets.find(q => q.id === id) || presets.find(q => q.id === "12m");
+    document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.id === p.id)));
+    show(p.from, p.to, p.name);
+    try { history.replaceState(null, "", "#" + p.id); } catch (e) { /* file:// */ }
+  }
+  function custom() {
+    const f = parse($("from").value), t = parse($("to").value);
+    if (isNaN(f) || isNaN(t)) return;
+    const a = clamp(Math.min(f, t), all.start, all.start + (all.counts.length - 1) * DAY), b = clamp(Math.max(f, t), all.start, all.start + (all.counts.length - 1) * DAY);
+    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", "false"));
+    show(a, b, "from " + fmtDay(a, false) + ", " + new Date(a).getUTCFullYear() + " to " + fmtDay(b, false) + ", " + new Date(b).getUTCFullYear());
+  }
+  $("from").addEventListener("change", custom);
+  $("to").addEventListener("change", custom);
 
   // ------------------------------------------------------------ camera + projection
   const HOME = { yaw: -0.5, pitch: 0.58, D: 58, tx: 0, ty: 2.4, tz: 0 };
   const SWAY_MS = 16000;
-  let SWAY = 0.55;
+  let SWAY = 0.36;
   const cam = Object.assign({}, HOME);
-  let W = 0, H = 0, DPR = 1, F = 600, SX = 0, SY = 0;
-  let cyw = 1, syw = 0, cpt = 1, spt = 0;
+  let W = 0, H = 0, DPR = 1, F = 600, SX = 0, SY = 0, cyw = 1, syw = 0, cpt = 1, spt = 0;
   function trig() { cyw = Math.cos(cam.yaw); syw = Math.sin(cam.yaw); cpt = Math.cos(cam.pitch); spt = Math.sin(cam.pitch); }
   function proj(x, y, z) {
     const dx = x - cam.tx, dy = y - cam.ty, dz = z - cam.tz;
@@ -282,182 +307,139 @@
     const dist = Math.max(0.8, cam.D - toward), k = F / dist;
     return { x: SX + x1 * k, y: SY - up * k, k, dist };
   }
+  const halfZ = () => (N > 20 ? 1.5 : 1) * 3.9;
   function fit(first) {
     const r = canvas.getBoundingClientRect();
     W = Math.max(1, r.width); H = Math.max(1, r.height);
     DPR = Math.min(2, window.devicePixelRatio || 1);
     canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
-    const narrow = W < 640;
-    Object.assign(HOME, narrow ? { yaw: -1.2, pitch: 0.66, D: 56 } : { yaw: -0.5, pitch: 0.58, D: 58 });
-    SWAY = narrow ? 0.3 : 0.36;
+    const narrow = W < 640, compact = N <= 20;
+    Object.assign(HOME, compact ? { yaw: -0.7, pitch: 0.7, D: 40 } : narrow ? { yaw: -1.2, pitch: 0.66, D: 56 } : { yaw: -0.5, pitch: 0.58, D: 58 });
+    HOME.D = Math.max(HOME.D, N * 1.1);
+    SWAY = compact ? 0.6 : narrow ? 0.3 : 0.36;
     const saved = Object.assign({}, cam);
     Object.assign(cam, HOME);
     F = 1; SX = 0; SY = 0;
-    const hx = (N - 1) / 2 + 1, hmax = pins.reduce((m, p) => Math.max(m, p.h), 1);
+    const hx = (N - 1) / 2 + 1, hz = halfZ() + 0.6, hmax = pins.reduce((m, p) => Math.max(m, p.h), 1);
     let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
     for (let i = 0; i <= 8; i++) {
       cam.yaw = HOME.yaw + SWAY * (i / 4 - 1);
       trig();
-      const pts = [[-hx, 0, -4], [hx, 0, -4], [-hx, 0, 4.8], [hx, 0, 4.8]];
+      const pts = [[-hx, 0, -hz], [hx, 0, -hz], [-hx, 0, hz + 0.9], [hx, 0, hz + 0.9]];
       for (const q of pins) pts.push([q.X, q.h, q.Z]);
       if (!pins.length) pts.push([0, hmax, 0]);
-      for (const [x, y, z] of pts) {
-        const p = proj(x, y, z);
-        x0 = Math.min(x0, p.x); x1 = Math.max(x1, p.x); y0 = Math.min(y0, p.y); y1 = Math.max(y1, p.y);
-      }
+      for (const [x, y, z] of pts) { const p = proj(x, y, z); x0 = Math.min(x0, p.x); x1 = Math.max(x1, p.x); y0 = Math.min(y0, p.y); y1 = Math.max(y1, p.y); }
     }
-    cam.yaw = HOME.yaw;
-    trig();
-    F = Math.min((W * 0.92) / (x1 - x0), (H * 0.8) / (y1 - y0));
+    cam.yaw = HOME.yaw; trig();
+    F = Math.min((W * 0.9) / (x1 - x0), (H * 0.72) / (y1 - y0));
     SX = W / 2 - F * (x0 + x1) / 2;
-    SY = H * 0.47 - F * (y0 + y1) / 2;
+    SY = H * 0.5 - F * (y0 + y1) / 2;
     if (!first) Object.assign(cam, saved);
+    else { Object.assign(cam, HOME); swayC = null; }
     trig();
     dirty = true;
   }
 
   // ------------------------------------------------------------ state
-  let dirty = true, spin = !REDUCED, hovered = null, tween = null, replayT0 = null, vYaw = 0, lastInput = -1e9;
-  let swayC = null, swayT0 = 0;
+  let dirty = true, spin = true, hovered = null, tween = null, replayT0 = null, vYaw = 0, lastInput = -1e9, swayC = null, swayT0 = 0;
   const T0 = performance.now();
   function growOf(p, now) {
     if (replayT0 === null) return 1;
-    const e = now - replayT0 - (p.w / N) * REPLAY_MS;
+    const e = now - replayT0 - (p.w / Math.max(1, N)) * REPLAY_MS;
     return e <= 0 ? 0 : easeOutBack(Math.min(1, e / GROW_MS));
   }
-  function replay() {
-    if (REDUCED) return;
-    replayT0 = performance.now();
-    setHover(null);
-  }
+  function replay() { replayT0 = performance.now(); setHover(null); lastInput = replayT0 + REPLAY_MS + GROW_MS - 2600; }
 
   // ------------------------------------------------------------ drawing
-  function quad(pts) {
-    g.beginPath();
-    pts.forEach((p, i) => (i ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y)));
-    g.closePath();
-  }
+  function quad(pts) { g.beginPath(); pts.forEach((p, i) => (i ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y))); g.closePath(); }
   function draw(now) {
     g.setTransform(DPR, 0, 0, DPR, 0, 0);
     g.clearRect(0, 0, W, H);
     trig();
     const near = cam.D - N / 2, far = cam.D + N / 2;
-    const fog = dist => clamp(1.12 - ((dist - near) / (far - near)) * 0.72, 0.26, 1);
-    const hx = (N - 1) / 2 + 0.9, hz = 3.9;
+    const fog = dist => clamp(1.12 - ((dist - near) / Math.max(1, far - near)) * 0.6, 0.35, 1);
+    const hx = (N - 1) / 2 + 0.9, hz = halfZ();
     const flat = Math.max(0.3, spt);
-
     // platform
     quad([proj(-hx, 0, -hz), proj(hx, 0, -hz), proj(hx, 0, hz), proj(-hx, 0, hz)]);
-    g.fillStyle = rgba(C.dot, 0.035);
-    g.fill();
-    g.strokeStyle = rgba(C.soft, 0.24);
-    g.lineWidth = 1;
-    g.stroke();
-
-    // floor dots
-    g.fillStyle = rgba(C.soft, 1);
+    g.fillStyle = "rgba(22,33,61,.95)"; g.fill();
+    g.strokeStyle = rgba(EDGE, 0.55); g.lineWidth = 2; g.stroke();
+    // floor: empty days as small dots, active days as coloured tiles
     for (const x of days) {
-      if (x.c > 0) continue;
-      const p = proj(x.X, 0, x.Z), r = clamp(0.085 * p.k, 0.55, 2.6);
-      g.globalAlpha = 0.46 * fog(p.dist);
-      g.beginPath();
-      g.ellipse(p.x, p.y, r, r * flat, 0, 0, Math.PI * 2);
-      g.fill();
+      const p = proj(x.X, 0, x.Z), f = fog(p.dist);
+      if (x.c > 0) {
+        const s = clamp(0.34 * p.k, 2, 9);
+        g.globalAlpha = 0.6 * f; g.fillStyle = rgba(LEVELS[x.lv], 1);
+        g.fillRect(p.x - s / 2, p.y - s * flat / 2, s, s * flat);
+      } else {
+        const r = clamp(0.07 * p.k, 0.6, 2.2);
+        g.globalAlpha = 0.5 * f; g.fillStyle = rgba(DIM, 1);
+        g.fillRect(p.x - r, p.y - r * flat, r * 2, r * 2 * flat);
+      }
     }
     g.globalAlpha = 1;
-
-    // month ticks and labels along the front edge
-    g.textAlign = "center";
-    g.textBaseline = "top";
+    // month ticks and labels on the front edge
+    g.textAlign = "center"; g.textBaseline = "top";
     const placed = [];
-    const labels = months.map(m => ({ m, a: proj(m.X, 0, hz), b: proj(m.X, 0, hz + 0.45), l: proj(m.X, 0, hz + 0.8) }))
-      .sort((u, v) => u.l.dist - v.l.dist);
+    const labels = months.map(m => ({ m, a: proj(m.X, 0, hz), b: proj(m.X, 0, hz + 0.45), l: proj(m.X, 0, hz + 0.9) })).sort((u, v) => u.l.dist - v.l.dist);
     for (const { m, a, b, l } of labels) {
-      const size = clamp(0.62 * l.k, 9, 13), w = size * 0.62 * m.label.length;
-      const box = [l.x - w / 2 - 3, l.y - 2, l.x + w / 2 + 3, l.y + size + 2];
+      const size = clamp(0.5 * l.k, 8, 11), w = size * 1.05 * m.label.length;
+      const box = [l.x - w / 2 - 4, l.y - 2, l.x + w / 2 + 4, l.y + size + 3];
       if (placed.some(q => box[0] < q[2] && box[2] > q[0] && box[1] < q[3] && box[3] > q[1])) continue;
       placed.push(box);
       const f = fog(l.dist);
-      g.strokeStyle = rgba(C.soft, 0.4 * f);
+      g.strokeStyle = rgba(SOFT, 0.5 * f); g.lineWidth = 1.5;
       g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke();
-      g.fillStyle = rgba(C.soft, 0.95 * f);
-      g.font = "500 " + size.toFixed(1) + "px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
-      g.fillText(m.label, l.x, l.y);
+      g.fillStyle = rgba(SOFT, 0.95 * f);
+      g.font = size.toFixed(1) + 'px "Press Start 2P", ui-monospace, Menlo, monospace';
+      g.fillText(m.label.toUpperCase(), l.x, l.y);
     }
-
-    // a light band that sweeps the year: the replay cursor, or a slow idle scan
+    // the sweep: the replay cursor, or a slow idle scan
     let band = null, bandAlpha = 0;
     if (replayT0 !== null) {
       const e = (now - replayT0) / REPLAY_MS;
       if (e <= 1.08) { band = lerp(-hx, hx, clamp(e, 0, 1)); bandAlpha = e > 1 ? (1.08 - e) / 0.08 : 1; }
-    } else if (!REDUCED) {
+    } else {
       const ph = ((now - T0) % SCAN_MS) / SCAN_MS;
-      if (ph > 0.1 && ph < 0.6) { band = lerp(-hx, hx, (ph - 0.1) / 0.5); bandAlpha = Math.min(1, (ph - 0.1) / 0.04, (0.6 - ph) / 0.04) * 0.75; }
+      if (ph > 0.1 && ph < 0.6) { band = lerp(-hx, hx, (ph - 0.1) / 0.5); bandAlpha = Math.min(1, (ph - 0.1) / 0.04, (0.6 - ph) / 0.04) * 0.7; }
     }
     if (band !== null) {
-      const grad = (() => {
-        const a = proj(band - 1.4, 0, 0), b = proj(band + 1.4, 0, 0);
-        const gr = g.createLinearGradient(a.x, a.y, b.x, b.y);
-        gr.addColorStop(0, rgba(C.dot, 0));
-        gr.addColorStop(0.5, rgba(C.dot, 0.22 * bandAlpha));
-        gr.addColorStop(1, rgba(C.dot, 0));
-        return gr;
-      })();
+      const a0 = proj(band - 1.4, 0, 0), b0 = proj(band + 1.4, 0, 0), gr = g.createLinearGradient(a0.x, a0.y, b0.x, b0.y);
+      gr.addColorStop(0, rgba(WHITE, 0)); gr.addColorStop(0.5, rgba(WHITE, 0.18 * bandAlpha)); gr.addColorStop(1, rgba(WHITE, 0));
       quad([proj(band - 1.4, 0, -hz), proj(band + 1.4, 0, -hz), proj(band + 1.4, 0, hz), proj(band - 1.4, 0, hz)]);
-      g.fillStyle = grad;
-      g.fill();
-      const a = proj(band, 0, -hz), b = proj(band, 0, hz);
-      g.strokeStyle = rgba(C.dot, 0.55 * bandAlpha);
-      g.lineWidth = 1.2;
-      g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke();
+      g.fillStyle = gr; g.fill();
     }
-
     // pins, far to near
     const list = [];
     for (const p of pins) {
       p.visible = false;
       const grow = growOf(p, now);
       if (grow <= 0.002) continue;
-      const b = proj(p.X, 0, p.Z), t = proj(p.X, p.h * grow, p.Z);
-      list.push({ p, b, t });
+      list.push({ p, b: proj(p.X, 0, p.Z), t: proj(p.X, p.h * grow, p.Z) });
     }
     list.sort((u, v) => v.b.dist - u.b.dist);
-    g.lineCap = "round";
     for (const { p, b, t } of list) {
-      const f = fog(b.dist), hov = p === hovered;
+      const f = fog(b.dist), hov = p === hovered, col = LEVELS[p.lv];
       const lit = band === null ? 0 : Math.max(0, 1 - Math.abs(p.X - band) / 1.3) * bandAlpha;
       g.globalAlpha = f;
-      g.fillStyle = rgba(C.dot, hov ? 0.5 : 0.28);
-      g.beginPath();
-      g.ellipse(b.x, b.y, 0.5 * b.k, 0.5 * b.k * flat, 0, 0, Math.PI * 2);
-      g.fill();
-      const lw = clamp(0.17 * b.k, 1.2, 4.6);
+      const lw = clamp(0.2 * b.k, 1.5, 6);
       const gr = g.createLinearGradient(b.x, b.y, t.x, t.y);
-      gr.addColorStop(0, rgba(C.dot, 0.05));
-      gr.addColorStop(1, rgba(C.dot, hov ? 1 : 0.93));
-      g.strokeStyle = gr;
-      g.lineWidth = lw;
+      gr.addColorStop(0, rgba(col, 0.12)); gr.addColorStop(1, rgba(col, 1));
+      g.strokeStyle = gr; g.lineWidth = lw; g.lineCap = "butt";
       g.beginPath(); g.moveTo(b.x, b.y); g.lineTo(t.x, t.y); g.stroke();
-      const R = clamp(0.78 * t.k, 7, 28) * (hov ? 1.4 : 1 + lit * 0.5);
-      g.globalAlpha = f * clamp(0.5 + lit * 0.5 + (hov ? 0.5 : 0), 0, 1);
-      g.drawImage(glow, t.x - R, t.y - R, R * 2, R * 2);
+      const R = clamp(0.8 * t.k, 8, 30) * (hov ? 1.5 : 1 + lit * 0.6);
+      g.globalAlpha = f * clamp(0.55 + lit * 0.45 + (hov ? 0.45 : 0), 0, 1);
+      g.drawImage(glows[p.lv], t.x - R, t.y - R, R * 2, R * 2);
       g.globalAlpha = f;
-      const cr = clamp(0.2 * t.k, 1.8, 5.6) * (hov ? 1.3 : 1);
-      g.fillStyle = rgba(C.strong, 1);
-      g.beginPath(); g.arc(t.x, t.y, cr, 0, Math.PI * 2); g.fill();
-      if (hov) {
-        g.strokeStyle = rgba(C.strong, 0.55);
-        g.lineWidth = 1;
-        g.beginPath(); g.arc(t.x, t.y, cr + 4.5, 0, Math.PI * 2); g.stroke();
-      }
+      const cr = clamp(0.24 * t.k, 2.5, 7) * (hov ? 1.35 : 1);
+      g.fillStyle = rgba(col, 1); g.fillRect(t.x - cr, t.y - cr, cr * 2, cr * 2);
+      g.fillStyle = rgba(WHITE, 0.85); g.fillRect(t.x - cr, t.y - cr, cr, Math.max(1, cr * 0.5));
+      if (hov) { g.strokeStyle = rgba(WHITE, 0.9); g.lineWidth = 2; g.strokeRect(t.x - cr - 4, t.y - cr - 4, cr * 2 + 8, cr * 2 + 8); }
       Object.assign(p, { visible: true, bx: b.x, by: b.y, sx: t.x, sy: t.y, lw, cr });
     }
     g.globalAlpha = 1;
-
-    // the running total climbs with the replay
     if (replayT0 !== null) {
-      const e = clamp((now - replayT0) / REPLAY_MS, 0, 1);
-      const w = Math.min(N - 1, Math.floor(e * N));
+      const e = clamp((now - replayT0) / REPLAY_MS, 0, 1), w = Math.min(N - 1, Math.floor(e * N));
       $("total").textContent = (e >= 1 ? total : cumWeek[w] || 0).toLocaleString("en-US");
     }
     placeTip();
@@ -465,11 +447,10 @@
 
   // ------------------------------------------------------------ hover + tooltip
   function segDist(px, py, ax, ay, bx, by) {
-    const vx = bx - ax, vy = by - ay, l2 = vx * vx + vy * vy || 1;
-    const t = clamp(((px - ax) * vx + (py - ay) * vy) / l2, 0, 1);
+    const vx = bx - ax, vy = by - ay, l2 = vx * vx + vy * vy || 1, t = clamp(((px - ax) * vx + (py - ay) * vy) / l2, 0, 1);
     return Math.hypot(px - (ax + t * vx), py - (ay + t * vy));
   }
-  function pick(mx, my) {
+  function pickPin(mx, my) {
     let best = null, bd = Infinity;
     for (const p of pins) {
       if (!p.visible) continue;
@@ -482,16 +463,13 @@
     if (p === hovered) return;
     hovered = p;
     canvas.classList.toggle("on-pin", !!p);
-    if (p) {
-      $("tipDate").textContent = fmtDay(p.t, true);
-      $("tipCount").textContent = p.c + (p.c === 1 ? " contribution" : " contributions");
-      tip.hidden = false;
-    } else tip.hidden = true;
+    if (p) { $("tipDate").textContent = fmtDay(p.t, true); $("tipCount").textContent = p.c + (p.c === 1 ? " contribution" : " contributions"); tip.hidden = false; }
+    else tip.hidden = true;
     dirty = true;
   }
   function placeTip() {
     if (!hovered || tip.hidden) return;
-    const x = clamp(hovered.sx, 70, W - 70), y = Math.max(hovered.sy, 56);
+    const x = clamp(hovered.sx, 80, W - 80), y = Math.max(hovered.sy, 60);
     tip.style.transform = "translate(" + x.toFixed(1) + "px," + y.toFixed(1) + "px) translate(-50%, calc(-100% - 16px))";
   }
 
@@ -499,30 +477,22 @@
   function pan(dxp, dyp) {
     trig();
     const s = cam.D / F;
-    cam.tx += -dxp * s * cyw;
-    cam.tz += dxp * s * syw;
+    cam.tx += -dxp * s * cyw; cam.tz += dxp * s * syw;
     const q = (dyp * s) / Math.max(0.3, spt);
-    cam.tx += -q * syw;
-    cam.tz += -q * cyw;
-    cam.tx = clamp(cam.tx, -N / 2 - 6, N / 2 + 6);
-    cam.tz = clamp(cam.tz, -14, 14);
+    cam.tx += -q * syw; cam.tz += -q * cyw;
+    cam.tx = clamp(cam.tx, -N / 2 - 6, N / 2 + 6); cam.tz = clamp(cam.tz, -16, 16);
   }
-  function zoomBy(f) { cam.D = clamp(cam.D * f, DMIN, DMAX); dirty = true; }
+  function zoomBy(f) { cam.D = clamp(cam.D * f, DMIN, Math.max(DMAX, N * 3)); dirty = true; }
   function resetView() {
     const from = Object.assign({}, cam), to = Object.assign({}, HOME);
     let dy = (to.yaw - from.yaw) % (Math.PI * 2);
     if (dy > Math.PI) dy -= Math.PI * 2;
     if (dy < -Math.PI) dy += Math.PI * 2;
     to.yaw = from.yaw + dy;
-    tween = { from, to, t0: performance.now(), ms: REDUCED ? 1 : 700 };
-    vYaw = 0;
-    lastInput = performance.now();
+    tween = { from, to, t0: performance.now(), ms: 700 };
+    vYaw = 0; lastInput = performance.now();
   }
-  function toggleSpin() {
-    spin = !spin;
-    $("spinBtn").setAttribute("aria-pressed", String(spin));
-    if (spin) lastInput = -1e9;
-  }
+  function toggleSpin() { spin = !spin; $("spinBtn").setAttribute("aria-pressed", String(spin)); if (spin) lastInput = -1e9; }
 
   const ptrs = new Map();
   let mode = null, lastX = 0, lastY = 0, lastMoveT = 0, down = null, pinch = null;
@@ -534,7 +504,7 @@
     if (ptrs.size === 1) {
       mode = e.button === 2 || e.shiftKey || e.ctrlKey || e.metaKey ? "pan" : "rotate";
       lastX = e.clientX; lastY = e.clientY; lastMoveT = e.timeStamp;
-      down = { x: e.clientX, y: e.clientY, t: performance.now(), type: e.pointerType };
+      down = { x: e.clientX, y: e.clientY, t: performance.now() };
     } else if (ptrs.size === 2) {
       const [a, b] = [...ptrs.values()];
       pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, D: cam.D, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 };
@@ -543,26 +513,18 @@
     canvas.classList.add("dragging");
   });
   canvas.addEventListener("pointermove", e => {
-    if (!ptrs.has(e.pointerId)) {
-      if (e.pointerType === "mouse") { const [x, y] = local(e); setHover(pick(x, y)); }
-      return;
-    }
+    if (!ptrs.has(e.pointerId)) { if (e.pointerType === "mouse") { const [x, y] = local(e); setHover(pickPin(x, y)); } return; }
     ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
     lastInput = performance.now();
     if (mode === "rotate") {
       const dx = e.clientX - lastX, dy = e.clientY - lastY, dt = Math.max(1, e.timeStamp - lastMoveT);
-      cam.yaw -= dx * 0.0065;
-      cam.pitch = clamp(cam.pitch + dy * 0.0045, 0.08, 1.45);
-      vYaw = (-dx * 0.0065) / dt;
-      lastMoveT = e.timeStamp;
-    } else if (mode === "pan") {
-      pan(e.clientX - lastX, e.clientY - lastY);
-    } else if (mode === "pinch" && ptrs.size >= 2) {
+      cam.yaw -= dx * 0.0065; cam.pitch = clamp(cam.pitch + dy * 0.0045, 0.08, 1.45);
+      vYaw = (-dx * 0.0065) / dt; lastMoveT = e.timeStamp;
+    } else if (mode === "pan") pan(e.clientX - lastX, e.clientY - lastY);
+    else if (mode === "pinch" && ptrs.size >= 2) {
       const [a, b] = [...ptrs.values()];
       const d = Math.hypot(a.x - b.x, a.y - b.y) || 1, mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
-      cam.D = clamp((pinch.D * pinch.d) / d, DMIN, DMAX);
-      pan(mx - pinch.mx, my - pinch.my);
-      pinch.mx = mx; pinch.my = my;
+      cam.D = clamp((pinch.D * pinch.d) / d, DMIN, Math.max(DMAX, N * 3)); pan(mx - pinch.mx, my - pinch.my); pinch.mx = mx; pinch.my = my;
     }
     lastX = e.clientX; lastY = e.clientY;
     if (down && Math.hypot(e.clientX - down.x, e.clientY - down.y) > 6) { down = null; setHover(null); }
@@ -572,16 +534,10 @@
     ptrs.delete(e.pointerId);
     if (ptrs.size === 0) {
       canvas.classList.remove("dragging");
-      if (down && performance.now() - down.t < 400) {
-        const [x, y] = local(e);
-        setHover(pick(x, y));
-      }
+      if (down && performance.now() - down.t < 400) { const [x, y] = local(e); setHover(pickPin(x, y)); }
       if (mode !== "rotate" || e.timeStamp - lastMoveT > 60) vYaw = 0;
       mode = null; down = null; pinch = null;
-    } else if (ptrs.size === 1) {
-      const p = [...ptrs.values()][0];
-      mode = "rotate"; lastX = p.x; lastY = p.y; pinch = null;
-    }
+    } else if (ptrs.size === 1) { const p = [...ptrs.values()][0]; mode = "rotate"; lastX = p.x; lastY = p.y; pinch = null; }
   }
   canvas.addEventListener("pointerup", release);
   canvas.addEventListener("pointercancel", release);
@@ -613,56 +569,46 @@
   $("spinBtn").addEventListener("click", toggleSpin);
   $("replayBtn").addEventListener("click", replay);
   $("resetBtn").addEventListener("click", resetView);
-  if (window.ResizeObserver) new ResizeObserver(() => fit(false)).observe(canvas);
-  else window.addEventListener("resize", () => fit(false));
+  if (window.ResizeObserver) new ResizeObserver(() => { if (all) fit(false); }).observe(canvas);
+  else window.addEventListener("resize", () => { if (all) fit(false); });
 
   // ------------------------------------------------------------ loop
   let last = performance.now();
   function frame(now) {
     const dt = Math.min(50, now - last);
     last = now;
-    let moving = false;
     if (tween) {
       const k = easeInOut(clamp((now - tween.t0) / tween.ms, 0, 1));
       for (const key of ["yaw", "pitch", "D", "tx", "ty", "tz"]) cam[key] = lerp(tween.from[key], tween.to[key], k);
       if (k >= 1) tween = null;
-      moving = true;
     } else if (!mode && Math.abs(vYaw) > 1e-5) {
-      cam.yaw += vYaw * dt;
-      vYaw *= Math.pow(0.994, dt);
-      moving = true;
+      cam.yaw += vYaw * dt; vYaw *= Math.pow(0.994, dt);
     } else if (spin && !mode && now - lastInput > 2600) {
       if (swayC === null) { swayC = cam.yaw; swayT0 = now; }
       const e = now - swayT0;
       cam.yaw = swayC + SWAY * Math.sin((e / SWAY_MS) * Math.PI * 2) * Math.min(1, e / 3000);
-      moving = true;
     } else swayC = null;
-    if (replayT0 !== null && now - replayT0 > REPLAY_MS + GROW_MS + 400) {
-      replayT0 = null;
-      $("total").textContent = total.toLocaleString("en-US");
-    }
-    if (dirty || moving || mode || replayT0 !== null || !REDUCED) { draw(now); dirty = false; }
+    if (replayT0 !== null && now - replayT0 > REPLAY_MS + GROW_MS + 400) { replayT0 = null; $("total").textContent = total.toLocaleString("en-US"); }
+    if (all) draw(now);
     requestAnimationFrame(frame);
   }
 
   function start(data) {
-    load(data);
-    if (!REDUCED) {
-      replayT0 = performance.now() + 250;
-      lastInput = replayT0 + REPLAY_MS + GROW_MS - 2000;
-    }
+    all = { start: parse(data.start), counts: data.counts.map(c => Math.max(0, c | 0)) };
+    if (data.updated) $("updated").textContent = "Refreshed " + fmtDay(parse(data.updated), false) + ",";
+    buildPresets();
+    const want = (location.hash || "").slice(1);
+    pick(presets.some(p => p.id === want) ? want : "12m");
     requestAnimationFrame(frame);
   }
-  // newest numbers straight from the repo (the daily Action commits them), then this site's copy, then the built-in snapshot
+  // newest numbers straight from the repo (the Action commits them), then this site's copy, then a stub
   const SOURCES = ["https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/docs/skyline/data.json", "data.json"];
-  const valid = d => d && typeof d.start === "string" && Array.isArray(d.counts) && d.counts.length > 0;
-  const get = url => fetch(url, { cache: "no-cache" })
-    .then(r => (r.ok ? r.json() : Promise.reject(new Error(url + " " + r.status))))
-    .then(d => (valid(d) ? d : Promise.reject(new Error(url + " invalid"))));
+  const valid = d => d && typeof d.start === "string" && Array.isArray(d.counts) && d.counts.length > 1;
+  const get = url => fetch(url, { cache: "no-cache" }).then(r => (r.ok ? r.json() : Promise.reject(new Error(url)))).then(d => (valid(d) ? d : Promise.reject(new Error(url))));
   SOURCES.slice(1).reduce((p, url) => p.catch(() => get(url)), get(SOURCES[0]))
     .catch(() => JSON.parse($("fallback").textContent))
     .then(start);
-  window.__skyline = { cam, get pins() { return pins; }, get hovered() { return hovered; }, pick, replay, resetView };
+  window.__skyline = { cam, get pins() { return pins; }, get presets() { return presets; }, pick, get hovered() { return hovered; } };
 })();
 </script>
 </body>
