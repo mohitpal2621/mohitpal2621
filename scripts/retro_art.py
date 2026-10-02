@@ -495,33 +495,31 @@ STACK = [
 ]
 
 
-def stack():
+def stack_svg(W, narrow):
+    """The tech stack as pixel chips. Wide: labels on the left. Narrow (phones): each label above its chips."""
     T = Text("s")
-    W = 860
-    pad, label_w, chip_h, gap = 22, 170, 24, 8
+    pad, chip_h, gap = (14, 24, 6) if narrow else (22, 24, 8)
+    label_w = 0 if narrow else 170
     x_max = W - pad
-    rows_svg, y = [], 22
-    order = 0
+    rows_svg, y = [], 18 if narrow else 22
     for label, items in STACK:
-        rows_svg.append(T(label, pad, y + 6, "#7ee787", 2))
+        rows_svg.append(T(label, pad, y + (2 if narrow else 6), "#7ee787", 2))
+        if narrow:
+            y += 26
         x = pad + label_w
         line_y = y
         for item in items:
             w = T.width(item, 2) + 20
-            if x + w > x_max:
+            if x + w > x_max and x > pad + label_w:
                 x = pad + label_w
                 line_y += chip_h + gap
-            delay = 0.15 + order * 0.04
-            kd = delay / (delay + 0.25)
             rows_svg.append(
-                f'<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;{kd:.3f};1" dur="{delay + 0.25:.2f}s" fill="freeze"/>'
                 f'<rect x="{x + 3}" y="{line_y + 3}" width="{w}" height="{chip_h}" fill="#000"/>'
                 f'<rect x="{x}" y="{line_y}" width="{w}" height="{chip_h}" fill="#1d2b53"/>'
                 f'<rect x="{x}" y="{line_y}" width="{w}" height="2" fill="#2f4380"/>'
-                + T(item, x + 10, line_y + 6, "#fff1e8", 2) + "</g>")
+                + T(item, x + 10, line_y + 6, "#fff1e8", 2))
             x += w + gap
-            order += 1
-        y = line_y + chip_h + 18
+        y = line_y + chip_h + (16 if narrow else 18)
     H = y + 6
     body = frame(2, 2, W - 10, H - 10, "#0f1629", "#30405f", shadow="#000000") + "".join(rows_svg)
     # a soft shine that sweeps across now and then
@@ -530,9 +528,13 @@ def stack():
     defs = T.defs() + ('<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/>'
                        '<stop offset=".5" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>')
     alt = "; ".join(f"{label.title()}: {', '.join(items)}" for label, items in STACK)
-    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
-           f'aria-labelledby="t"><title id="t">Tech stack. {html.escape(alt)}</title><defs>{defs}</defs><g shape-rendering="crispEdges">{body}</g></svg>\n')
-    save("stack.svg", svg)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
+            f'aria-labelledby="t"><title id="t">Tech stack. {html.escape(alt)}</title><defs>{defs}</defs><g shape-rendering="crispEdges">{body}</g></svg>\n')
+
+
+def stack():
+    save("stack.svg", stack_svg(860, False))
+    save("stack-narrow.svg", stack_svg(360, True))
 
 
 if __name__ == "__main__":
