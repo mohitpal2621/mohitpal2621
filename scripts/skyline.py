@@ -83,25 +83,35 @@ def parse_calendar(html):
 
 def fetch_all(user, previous=None):
     """Every day from the start of the account's first year up to today."""
+    previous = previous or {}
     base = f"https://github.com/users/{user}/contributions"
-    latest = parse_calendar(_get(base))
-    if len(latest) < 300:
-        raise ValueError(f"calendar parse found only {len(latest)} days")
-    today = max(latest)
-    first_year = int(today[:4]) - 4
+    # The default calendar (last 12 months) is the slowest page and sometimes times out.
+    # The yearly calendars hold the same days, so it only decides "today" and fills in the latest counts.
+    try:
+        latest = parse_calendar(_get(base))
+        if len(latest) < 300:
+            raise ValueError(f"calendar parse found only {len(latest)} days")
+        today = max(latest)
+    except Exception as exc:
+        print("the default calendar failed:", exc, "- using the yearly calendars only")
+        latest, today = {}, datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+    this_year = int(today[:4])
+    first_year = int(min(previous)[:4]) if previous else this_year - 4
     try:
         created = json.loads(_get(f"https://api.github.com/users/{user}", "application/vnd.github+json"))["created_at"]
         first_year = int(created[:4])
-    except Exception as exc:  # the API is optional; fall back to a few years back
+    except Exception as exc:  # the API is optional
         print("could not read the account creation date:", exc)
     days = {}
-    for year in range(first_year, int(today[:4]) + 1):
+    for year in range(first_year, this_year + 1):
         try:
             got = parse_calendar(_get(f"{base}?from={year}-01-01&to={year}-12-31"))
             days.update({d: c for d, c in got.items() if d.startswith(str(year))})
         except Exception as exc:
+            if year == this_year and not latest:
+                raise RuntimeError("no fresh numbers for this year, so the last good images stay up") from exc
             print("year", year, "failed:", exc, "- keeping its previous numbers")
-            days.update({d: c for d, c in (previous or {}).items() if d.startswith(str(year))})
+            days.update({d: c for d, c in previous.items() if d.startswith(str(year))})
     days.update(latest)
     return {d: c for d, c in days.items() if d <= today}, today
 
