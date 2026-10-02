@@ -246,7 +246,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=PROFILE+VIEWS&color=1d2b53&style=for-the-badge" alt="Profile views" />
+  <a href="https://visitorbadge.io/status?path=github.com%2Fmohitpal2621" title="Live visit stats"><img src="https://api.visitorbadge.io/api/visitors?path=github.com%2Fmohitpal2621&label=PROFILE%20VIEWS&labelColor=%231d2b53&countColor=%23238636&style=for-the-badge&labelStyle=upper" alt="Profile views" /></a>
 </p>
 
 <p align="center">
