@@ -1,16 +1,16 @@
-<h1 align="center">Hey, I'm Mohit <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="👋" width="36" height="36" /></h1>
+<h1 align="center">Hey, I'm Mohit <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/wave.svg" alt="👋" width="32" height="32" /></h1>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3200&pause=1000&color=C9D1D9&center=true&vCenter=true&width=620&lines=Software+Engineer+%C2%B7+2%2B+yrs+shipping+to+production;Serverless+%26+event-driven+backends+on+AWS;iOS+%26+Android+in-app+payments%2C+end+to+end;RL+environments+for+AI+coding+agents" />
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3200&pause=1000&color=57606A&center=true&vCenter=true&width=620&lines=Software+Engineer+%C2%B7+2%2B+yrs+shipping+to+production;Serverless+%26+event-driven+backends+on+AWS;iOS+%26+Android+in-app+payments%2C+end+to+end;RL+environments+for+AI+coding+agents" alt="Software Engineer · serverless and event-driven backends on AWS · iOS and Android in-app payments · RL environments for AI coding agents" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/typing-dark.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/typing-light.svg" alt="Software Engineer, 2+ years shipping to prod · serverless, event-driven backends on AWS · iOS and Android in-app payments, end to end · RL environments for AI coding agents" width="640" />
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-24292F?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://img.shields.io/badge/Email-24292F?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://leetcode.com/u/mohitpal2621/" title="340+ problems solved"><img src="https://img.shields.io/badge/LeetCode-340%2B%20solved-24292F?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=24292F" alt="LeetCode: 340+ problems solved" /></a>
+  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-linkedin.svg" alt="LinkedIn" height="30" /></a>&nbsp;
+  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-email.svg" alt="Email" height="30" /></a>&nbsp;
+  <a href="https://leetcode.com/u/mohitpal2621/" title="340+ problems solved"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-leetcode.svg" alt="LeetCode: 340+ problems solved" height="30" /></a>
 </p>
 
 <p align="center">
@@ -23,9 +23,9 @@
   <a href="#-lets-connect" title="Jump to Contact"><kbd>&nbsp;Contact&nbsp;</kbd></a>
 </p>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Man%20Technologist.png" alt="🧑‍💻" width="28" height="28" /> About me
+## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-about.svg" alt="🖥️" width="28" height="28" /> About me
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/hologram-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/hologram-light.svg" alt="Rotating dotted hologram globe" width="230" align="right" /></picture>
+<img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/room.svg" alt="Pixel-art me, coding at night on a chunky retro monitor while a cat naps on top of it" width="240" align="right" />
 
 I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of shipping production systems. I design **serverless, event-driven services on AWS**, own features **end to end across web and mobile**, and build **RL environments and verifiers for AI coding agents**.
 
@@ -34,14 +34,7 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 - 🎓 **Education:** B.Tech CSE, Maharaja Agrasen Institute of Technology, Delhi (2024) · CGPA 8.7
 - 📍 **Based in:** Gurgaon, India
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/terminal-dark.svg" />
-    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/terminal-light.svg" alt="Animated terminal. whoami: Mohit Pal, Software Engineer, Gurgaon, India. focus: serverless, event-driven backends on AWS; iOS and Android in-app payments; RL environments and verifiers for AI coding agents. stack: node, nestjs, typescript, python, lambda, dynamodb, eventbridge, sqs, react-native" width="100%" />
-  </picture>
-</p>
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="🚀" width="28" height="28" /> What I've shipped
+## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-shipped.svg" alt="🚀" width="28" height="28" /> What I've shipped
 
 <details open>
 <summary><b>🏢 Software Engineer · 4 Way Technologies</b> &nbsp;<sub>Aug 2024 – Present · New Delhi, India</sub></summary>
@@ -70,56 +63,37 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 
 </details>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Joystick.png" alt="🕹️" width="28" height="28" /> Arcade
+## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-arcade.svg" alt="🕹️" width="28" height="28" /> Arcade
 
-**BUG HUNT** is a tiny retro arcade game I built from scratch. Squash every bug before the deploy ships them to prod. Press any button to play it right in your browser, no sign-in needed.
+**PUSH TO PROD** is a tiny Mario-style platformer I built from scratch. Run, jump, stomp bugs and carry your code from localhost to staging to production. It plays right in your browser, on a phone too.
 
 <p align="center">
-  <a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/demo-dark.svg" />
-      <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/demo-light.svg" alt="BUG HUNT demo: a robot grabs a coffee to freeze the bugs, then squashes them between server racks on a retro CRT screen" width="560" />
-    </picture>
-  </a>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play PUSH TO PROD"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/arcade/demo.svg" alt="PUSH TO PROD gameplay: a pixel developer grabs coffee from a code block, stomps bugs, collects bits, climbs the SHIP staircase and pushes the code into the server" width="672" /></a>
 </p>
 
 <p align="center">
-<a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/up-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/up-light.svg" alt="Up" width="48" height="48" /></picture></a><br />
-<a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/left-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/left-light.svg" alt="Left" width="48" height="48" /></picture></a><a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/play-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/play-light.svg" alt="Play" width="48" height="48" /></picture></a><a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/right-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/right-light.svg" alt="Right" width="48" height="48" /></picture></a><br />
-<a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play BUG HUNT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/down-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/arcade/down-light.svg" alt="Down" width="48" height="48" /></picture></a>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play PUSH TO PROD"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-play.svg" alt="Play now" height="30" /></a>
+  <br />
+  <sub><kbd>←</kbd> <kbd>→</kbd> move &nbsp;·&nbsp; <kbd>Space</kbd> jump &nbsp;·&nbsp; <kbd>Shift</kbd> run &nbsp;·&nbsp; on-screen buttons on phones</sub>
 </p>
-
-<p align="center"><sub>Arrow keys, WASD or hjkl on desktop · touch pad or drag on phones · your hi-score stays in your browser</sub></p>
 
 <details>
 <summary><b>⚙️ How it's built</b></summary>
 <br />
 
-- One HTML file, no libraries: a 160×108 pixel canvas scaled up crisply, retro sound effects synthesized with Web Audio, and keyboard, touch and drag controls
-- Levels are generated on the fly and flood-filled so every bug is reachable; bugs speed up each level and flee when you get close
-- The preview above is the game's own demo AI, recorded by a Python script into an animated SVG, because a README can't run JavaScript
+- One web page and two small JavaScript modules, no libraries: a 320×176 canvas, chiptune music and sound effects made with Web Audio, and keyboard, touch and gamepad controls
+- Three hand-made worlds; a search bot plays every one of them to prove each can be finished without the run button
+- The preview above is recorded from the game's own engine into an animated SVG, because a README can't run JavaScript
 
 </details>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="🛠️" width="28" height="28" /> Tech stack
+## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-stack.svg" alt="🧰" width="28" height="28" /> Tech stack
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/stack-ticker-dark.svg" />
-    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/stack-ticker-light.svg" alt="Tech I work with: AWS Lambda, API Gateway, DynamoDB, EventBridge, SQS, Step Functions, S3, Serverless Framework, GCP Pub/Sub, Cloudflare, Docker, GitHub Actions, TypeScript, Node.js, NestJS, Python, React Native, React, Next.js, GraphQL, Socket.IO, MongoDB, Prisma, Contentful, LangChain, Jest" width="100%" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/stack.svg" alt="Tech stack. Languages: TypeScript, JavaScript, Python, C++, SQL. Backend: Node.js, NestJS, Express, REST, GraphQL, Socket.IO. Cloud: AWS Lambda, API Gateway, DynamoDB, EventBridge, SQS, Step Functions, S3, Serverless Framework, GCP Pub/Sub, Cloudflare. Web and mobile: React, React Native, Next.js, Redux, in-app purchases. Data and CMS: MongoDB, MySQL, Prisma, TypeORM, Firebase, Contentful. AI and DevOps: LangChain, LLM apps, RL environments, Docker, GitHub Actions, Jest, Linux, Git" width="100%" />
 </p>
 
-| Area | Tools |
-| :-- | :-- |
-| **Languages** | ![TypeScript](https://img.shields.io/badge/TypeScript-24292F?style=flat-square&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-24292F?style=flat-square&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-24292F?style=flat-square&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-24292F?style=flat-square&logo=cplusplus&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-24292F?style=flat-square) |
-| **Backend** | ![Node.js](https://img.shields.io/badge/Node.js-24292F?style=flat-square&logo=nodedotjs&logoColor=white) ![NestJS](https://img.shields.io/badge/NestJS-24292F?style=flat-square&logo=nestjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-24292F?style=flat-square&logo=express&logoColor=white) ![REST APIs](https://img.shields.io/badge/REST%20APIs-24292F?style=flat-square) ![GraphQL](https://img.shields.io/badge/GraphQL-24292F?style=flat-square&logo=graphql&logoColor=white) ![Socket.IO](https://img.shields.io/badge/Socket.IO-24292F?style=flat-square&logo=socketdotio&logoColor=white) |
-| **Cloud & Serverless** | ![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-24292F?style=flat-square) ![API Gateway](https://img.shields.io/badge/API%20Gateway-24292F?style=flat-square) ![DynamoDB](https://img.shields.io/badge/DynamoDB-24292F?style=flat-square) ![EventBridge](https://img.shields.io/badge/EventBridge-24292F?style=flat-square) ![SQS](https://img.shields.io/badge/SQS-24292F?style=flat-square) ![Step Functions](https://img.shields.io/badge/Step%20Functions-24292F?style=flat-square) ![S3](https://img.shields.io/badge/S3-24292F?style=flat-square) ![Serverless Framework](https://img.shields.io/badge/Serverless%20Framework-24292F?style=flat-square&logo=serverless&logoColor=white) ![GCP Pub/Sub](https://img.shields.io/badge/GCP%20Pub%2FSub-24292F?style=flat-square&logo=googlepubsub&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-24292F?style=flat-square&logo=cloudflare&logoColor=white) |
-| **Web & Mobile** | ![React](https://img.shields.io/badge/React-24292F?style=flat-square&logo=react&logoColor=white) ![React Native](https://img.shields.io/badge/React%20Native-24292F?style=flat-square&logo=react&logoColor=white) ![Next.js](https://img.shields.io/badge/Next.js-24292F?style=flat-square&logo=nextdotjs&logoColor=white) ![Redux](https://img.shields.io/badge/Redux-24292F?style=flat-square&logo=redux&logoColor=white) ![App Store IAP](https://img.shields.io/badge/App%20Store%20IAP-24292F?style=flat-square&logo=appstore&logoColor=white) ![Google Play Billing](https://img.shields.io/badge/Google%20Play%20Billing-24292F?style=flat-square&logo=googleplay&logoColor=white) |
-| **Data & CMS** | ![MongoDB](https://img.shields.io/badge/MongoDB-24292F?style=flat-square&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-24292F?style=flat-square&logo=mysql&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-24292F?style=flat-square&logo=prisma&logoColor=white) ![TypeORM](https://img.shields.io/badge/TypeORM-24292F?style=flat-square&logo=typeorm&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-24292F?style=flat-square&logo=firebase&logoColor=white) ![Contentful](https://img.shields.io/badge/Contentful-24292F?style=flat-square&logo=contentful&logoColor=white) |
-| **AI & DevOps** | ![LangChain](https://img.shields.io/badge/LangChain-24292F?style=flat-square&logo=langchain&logoColor=white) ![LLM apps](https://img.shields.io/badge/LLM%20apps-24292F?style=flat-square) ![RL environments](https://img.shields.io/badge/RL%20environments-24292F?style=flat-square) ![Docker](https://img.shields.io/badge/Docker-24292F?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-24292F?style=flat-square&logo=githubactions&logoColor=white) ![Jest](https://img.shields.io/badge/Jest-24292F?style=flat-square&logo=jest&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-24292F?style=flat-square&logo=linux&logoColor=white) ![Git](https://img.shields.io/badge/Git-24292F?style=flat-square&logo=git&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-24292F?style=flat-square&logo=postman&logoColor=white) |
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="🔥" width="28" height="28" /> Featured projects
+## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-projects.svg" alt="💾" width="28" height="28" /> Featured projects
 
 <table>
   <tr>
@@ -168,13 +142,15 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 > [!NOTE]
 > Most of my production work lives in private client repositories. Happy to walk through the architecture in a conversation.
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Comet.png" alt="☄️" width="28" height="28" /> Activity
+## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-activity.svg" alt="📊" width="28" height="28" /> Activity
 
+<!-- skyline:start -->
 <p align="center">
-  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Rotate and zoom it in 3D"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-dark.svg" /><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/assets/skyline-light.svg" alt="My last year of GitHub contributions as a slowly turning 3D skyline: one glowing pin per active day" width="100%" /></picture></a>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="My contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
 </p>
 
-<p align="center"><sub>One pin per active day, refreshed every 6 hours by a GitHub Action · <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/"><b>Rotate and zoom it in 3D</b></a></sub></p>
+<p align="center"><sub>One pin per day I contributed, taller and brighter means busier · refreshed every 6 hours · <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/"><b>open in 3D</b></a> to rotate it yourself or pick any dates</sub></p>
+<!-- skyline:end -->
 
 <details>
 <summary><b>🐍 Psst, click to watch a snake eat my contribution graph</b></summary>
@@ -188,17 +164,17 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 </p>
 </details>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" alt="🤝" width="28" height="28" /> Let's connect
+## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-contact.svg" alt="💌" width="28" height="28" /> Let's connect
 
 Always happy to talk serverless architecture, in-app payments or AI tooling.
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-Say%20hi-24292F?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=24292F" alt="LinkedIn" /></a>
-  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://img.shields.io/badge/Email-Drop%20a%20line-24292F?style=for-the-badge&logo=gmail&logoColor=white&labelColor=24292F" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-linkedin.svg" alt="LinkedIn" height="30" /></a>&nbsp;
+  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-email.svg" alt="Email" height="30" /></a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=Profile%20views&color=24292F&style=flat-square" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=Profile%20views&color=1d2b53&style=flat-square" alt="Profile views" />
   <br />
   <sub><a href="#hey-im-mohit-">Back to top ↑</a></sub>
 </p>
