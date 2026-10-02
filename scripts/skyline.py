@@ -304,9 +304,9 @@ def readme_block(made):
              f'  <a href="{PAGE}" title="Open it in 3D: rotate, zoom and pick any dates"><img src="{RAW}/art/skyline/last-12-months.svg" '
              f'alt="{made[0][2]["total"]} contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>',
              "</p>", "",
-             f'<p align="center"><sub>One pin per day I contributed, taller and brighter means busier · refreshed every 6 hours · '
-             f'<a href="{PAGE}"><b>open in 3D</b></a> to rotate it yourself or pick any dates</sub></p>', "",
-             "**See another range** (click one to open it):", ""]
+             '<p align="center">',
+             f'  <a href="{PAGE}" title="Rotate it, zoom in and pick any dates"><img src="{RAW}/art/pixel/btn-3d.svg" alt="Open in 3D and pick any dates" height="30" /></a>',
+             "</p>", ""]
     for key, heading, st in made[1:]:
         name = labels.get(key, key + (" so far" if "so far" in heading else ""))
         lines += [f'<details name="skyline-range">',
