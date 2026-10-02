@@ -769,48 +769,117 @@ def room_body():
 
 
 # ---------------------------------------------------------------- About
-def facts(T, x, y, label_w, width_chars, narrow):
-    out = ""
-    for label, value in ABOUT_FACTS:
-        check_text(label, value)
-        if narrow:
-            out += T(label, x, y, GREEN, 2)
-            y += 24
-            b, y = paragraph(T, value, x, y, width_chars, CREAM, YELLOW, lh=24)
-            out += b
-            y += 10
-        else:
-            out += T(label, x, y, GREEN, 2) + T(value, x + label_w, y, CREAM, 2)
-            y += 30
-    return out, y
+class Session:
+    """A terminal session that plays once: commands type out, their output prints line by line,
+    then a fresh prompt blinks. Everything sits in its final place, so the finished screen is what
+    shows wherever animation doesn't run."""
+
+    def __init__(self, T, idp):
+        self.T, self.idp, self.n = T, idp, 0
+        self.t = 0.8
+        self.defs, self.body = [], []
+
+    @staticmethod
+    def appear(t, content):
+        d = t + 0.01
+        return (f'<g><animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;{t / d:.4f}" '
+                f'dur="{d:.2f}s" fill="freeze"/>{content}</g>')
+
+    def command(self, cmd, x, y, per_char=0.1, pause=0.3):
+        T = self.T
+        check_text(cmd)
+        start = self.t
+        self.body.append(self.appear(start, T(">", x, y, GREEN, 2)) if start > 0.8 else T(">", x, y, GREEN, 2))
+        tx = x + 24
+        n = len(cmd)
+        t0 = start + pause
+        D = t0 + n * per_char
+        widths = ["0"] + [f"{k * 12}" for k in range(1, n + 1)]
+        times = ["0"] + [f"{(t0 + k * per_char) / D:.4f}" for k in range(1, n + 1)]
+        cid = f"{self.idp}{self.n}"
+        self.n += 1
+        self.defs.append(f'<clipPath id="{cid}"><rect x="{tx - 1}" y="{y - 4}" width="{n * 12 + 2}" height="26">'
+                         f'<animate attributeName="width" calcMode="discrete" values="{";".join(widths)}" keyTimes="{";".join(times)}" '
+                         f'dur="{D:.2f}s" fill="freeze"/></rect></clipPath>')
+        self.body.append(f'<g clip-path="url(#{cid})">{T(cmd, tx, y, CREAM, 2)}</g>')
+        # the cursor rides along while typing, then steps aside for the output
+        xs = [f"{tx + k * 12}" for k in range(0, n + 1)]
+        end = D + 0.25
+        self.body.append(
+            f'<rect x="{tx}" y="{y - 1}" width="10" height="16" fill="{GREEN}" opacity="0">'
+            f'<animate attributeName="x" calcMode="discrete" values="{";".join(xs)}" keyTimes="{";".join(times)}" dur="{D:.2f}s" fill="freeze"/>'
+            f'<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;{(start if start > 0.8 else 0) / (end + 0.01):.4f};{end / (end + 0.01):.4f}" '
+            f'dur="{end + 0.01:.2f}s" fill="freeze"/></rect>')
+        self.t = end + 0.1
+
+    def output(self, content, step=0.1):
+        self.body.append(self.appear(self.t, content))
+        self.t += step
+
+    def prompt(self, x, y):
+        T = self.T
+        self.body.append(self.appear(self.t, T(">", x, y, GREEN, 2)))
+        self.body.append(f'<rect x="{x + 24}" y="{y - 1}" width="10" height="16" fill="{GREEN}" opacity="0">'
+                         f'<animate attributeName="opacity" calcMode="discrete" values="1;0" dur="1.1s" begin="{self.t:.2f}s" repeatCount="indefinite"/></rect>')
+
+
+def para_lines(T, text, x, y, width, base=CREAM, hl=YELLOW, lh=26):
+    check_text(text.replace("**", ""))
+    return [(draw_segs(T, segs, x, y + i * lh, base, hl), y + i * lh) for i, segs in enumerate(wrap(text, width))]
 
 
 def about(narrow):
     T = Text("g")
+    S = Session(T, "tw")
     if not narrow:
         W = WIDE
-        body = f'<g transform="translate(26 26) scale(4)">{room_body()}</g>'
+        room = f'<g transform="translate(26 26) scale(4)">{room_body()}</g>'
         x = 26 + 320 + 30
-        body += T("> whoami", x, 30, GREEN, 2)
-        b, _ = paragraph(T, ABOUT_TEXT, x, 68, (WIDE - 34 - x) // 12, CREAM, YELLOW)
-        body += b
-        f, y = facts(T, 30, 26 + 256 + 30, 132, 0, False)
-        body += f
-        H = y + 10
+        S.command("whoami", x, 30, per_char=0.11)
+        for svg, _ in para_lines(T, ABOUT_TEXT, x, 68, (WIDE - 34 - x) // 12):
+            S.output(svg)
+        S.t += 0.35
+        y = 26 + 256 + 26
+        S.command("cat profile.txt", 30, y, per_char=0.07)
+        y += 36
+        for label, value in ABOUT_FACTS:
+            check_text(label, value)
+            S.output(T(label, 30, y, GREEN, 2) + T(value, 30 + 132, y, CREAM, 2), step=0.13)
+            y += 30
+        S.t += 0.15
+        S.prompt(30, y)
+        H = y + 18 + 18
     else:
         W = NARROW
-        body = f'<g transform="translate(18 18) scale(4)">{room_body()}</g>'
+        room = f'<g transform="translate(18 18) scale(4)">{room_body()}</g>'
         y = 18 + 256 + 24
-        body += T("> whoami", 20, y, GREEN, 2)
-        b, y = paragraph(T, ABOUT_TEXT, 20, y + 36, 26, CREAM, YELLOW, lh=24)
-        body += b
-        f, y = facts(T, 20, y + 18, 0, 26, True)
-        body += f
-        H = y + 10
+        S.command("whoami", 20, y, per_char=0.11)
+        y += 36
+        lines = para_lines(T, ABOUT_TEXT, 20, y, 26, lh=24)
+        for svg, _ in lines:
+            S.output(svg, step=0.08)
+        y += len(lines) * 24 + 16
+        S.t += 0.35
+        S.command("cat profile.txt", 20, y, per_char=0.07)
+        y += 36
+        for label, value in ABOUT_FACTS:
+            check_text(label, value)
+            block = T(label, 20, y, GREEN, 2)
+            y += 24
+            for svg, ly in para_lines(T, value, 20, y, 26, lh=24):
+                block += svg
+                y = ly + 24
+            S.output(block, step=0.13)
+            y += 10
+        S.t += 0.15
+        S.prompt(20, y)
+        H = y + 18 + 18
     alt = ("About me. Full-stack software developer. " + ABOUT_TEXT.replace("**", "") + " "
            + " ".join(f"{l.title()}: {v}." for l, v in ABOUT_FACTS))
-    return doc(W, H, panel(W, H) + body + shine(W, H, 12), T.defs() + SHINE, alt,
-               "Pixel art: me coding at night on a chunky retro monitor while a cat naps on top of it.")
+    body = panel(W, H) + room + "".join(S.body) + shine(W, H, 12)
+    return doc(W, H, body, T.defs() + SHINE + "".join(S.defs), alt,
+               "Pixel art: me coding at night on a chunky retro monitor while a cat naps on top of it. "
+               "Next to it a terminal runs whoami and cat profile.txt.")
 
 
 # ---------------------------------------------------------------- experience
