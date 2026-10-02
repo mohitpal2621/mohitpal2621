@@ -25,7 +25,9 @@
 
 ## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-about.svg" alt="🖥️" width="28" height="28" /> About me
 
-<img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/room.svg" alt="Pixel-art me, coding at night on a chunky retro monitor while a cat naps on top of it" width="240" align="right" />
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/room.svg" alt="Pixel-art me, coding at night on a chunky retro monitor while a cat naps on top of it" width="320" />
+</p>
 
 I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of shipping production systems. I design **serverless, event-driven services on AWS**, own features **end to end across web and mobile**, and build **RL environments and verifiers for AI coding agents**.
 
@@ -90,7 +92,10 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 ## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-stack.svg" alt="🧰" width="28" height="28" /> Tech stack
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/stack.svg" alt="Tech stack. Languages: TypeScript, JavaScript, Python, C++, SQL. Backend: Node.js, NestJS, Express, REST, GraphQL, Socket.IO. Cloud: AWS Lambda, API Gateway, DynamoDB, EventBridge, SQS, Step Functions, S3, Serverless Framework, GCP Pub/Sub, Cloudflare. Web and mobile: React, React Native, Next.js, Redux, in-app purchases. Data and CMS: MongoDB, MySQL, Prisma, TypeORM, Firebase, Contentful. AI and DevOps: LangChain, LLM apps, RL environments, Docker, GitHub Actions, Jest, Linux, Git" width="100%" />
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/stack-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/stack.svg" alt="Tech stack. Languages: TypeScript, JavaScript, Python, C++, SQL. Backend: Node.js, NestJS, Express, REST, GraphQL, Socket.IO. Cloud: AWS Lambda, API Gateway, DynamoDB, EventBridge, SQS, Step Functions, S3, Serverless Framework, GCP Pub/Sub, Cloudflare. Web and mobile: React, React Native, Next.js, Redux, in-app purchases. Data and CMS: MongoDB, MySQL, Prisma, TypeORM, Firebase, Contentful. AI and DevOps: LangChain, LLM apps, RL environments, Docker, GitHub Actions, Jest, Linux, Git" width="100%" />
+  </picture>
 </p>
 
 ## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-projects.svg" alt="💾" width="28" height="28" /> Featured projects
@@ -146,69 +151,10 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 
 <!-- skyline:start -->
 <p align="center">
-  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="442 contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="My contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
 </p>
 
 <p align="center"><sub>One pin per day I contributed, taller and brighter means busier · refreshed every 6 hours · <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/"><b>open in 3D</b></a> to rotate it yourself or pick any dates</sub></p>
-
-**See another range** (click one to open it):
-
-<details name="skyline-range">
-<summary><b>📅 Last 30 days</b> · 113 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="113 contributions in the last 30 days as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 Last 90 days</b> · 371 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="371 contributions in the last 90 days as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2026 so far</b> · 431 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2026.svg" alt="431 contributions in 2026 so far as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2025</b> · 11 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2025.svg" alt="11 contributions in 2025 as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2024</b> · 132 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2024.svg" alt="132 contributions in 2024 as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2023</b> · 67 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2023.svg" alt="67 contributions in 2023 as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2021</b> · 2 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2021.svg" alt="2 contributions in 2021 as a 3D skyline" width="100%" />
-</p>
-</details>
-
 <!-- skyline:end -->
 
 <details>
