@@ -14,6 +14,8 @@ import math
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -22,18 +24,45 @@ from retro_kit import P, Text, frame  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = "https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main"
 PAGE = "https://mohitpal2621.github.io/mohitpal2621/skyline/"
+DATA_PATH = os.environ.get("SKYLINE_DATA", os.path.join(ROOT, "docs", "skyline", "data.json"))
 LEVELS = ["#1f6f3a", "#238636", "#2ea043", "#3fb950", "#7ee787"]  # one green scale, like GitHub: less -> more
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 
 # ---------------------------------------------------------------- data
-def _get(url, accept="text/html"):
+def _get(url, accept="text/html", tries=4):
+    """GET with a few retries: github.com sometimes answers 502/504 for a moment."""
     headers = {"User-Agent": "skyline", "Accept": accept}
     if url.startswith("https://api.github.com/") and os.environ.get("GITHUB_TOKEN"):
         headers["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
-    req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read().decode("utf-8", "replace")
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as exc:
+            if (exc.code < 500 and exc.code != 429) or attempt == tries - 1:
+                raise
+            reason = f"HTTP {exc.code}"
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
+            if attempt == tries - 1:
+                raise
+            reason = str(exc)
+        wait = 5 * 2 ** attempt
+        print(f"{url}: {reason}, trying again in {wait}s")
+        time.sleep(wait)
+    raise RuntimeError("unreachable")
+
+
+def previous_days(path):
+    """Day counts from the last good data.json, used for any year that can't be fetched this time."""
+    try:
+        with open(path, encoding="utf-8") as fh:
+            old = json.load(fh)
+        start = datetime.date.fromisoformat(old["start"])
+        return {(start + datetime.timedelta(days=i)).isoformat(): c for i, c in enumerate(old["counts"])}
+    except (OSError, ValueError, KeyError, TypeError):
+        return {}
 
 
 def parse_calendar(html):
@@ -52,7 +81,7 @@ def parse_calendar(html):
     return {d: (c if c is not None else lvl) for d, c, lvl in cells.values()}
 
 
-def fetch_all(user):
+def fetch_all(user, previous=None):
     """Every day from the start of the account's first year up to today."""
     base = f"https://github.com/users/{user}/contributions"
     latest = parse_calendar(_get(base))
@@ -71,7 +100,8 @@ def fetch_all(user):
             got = parse_calendar(_get(f"{base}?from={year}-01-01&to={year}-12-31"))
             days.update({d: c for d, c in got.items() if d.startswith(str(year))})
         except Exception as exc:
-            print("year", year, "failed:", exc)
+            print("year", year, "failed:", exc, "- keeping its previous numbers")
+            days.update({d: c for d, c in (previous or {}).items() if d.startswith(str(year))})
     days.update(latest)
     return {d: c for d, c in days.items() if d <= today}, today
 
@@ -287,7 +317,7 @@ def main():
             for i, c in enumerate(data["counts"])}
         today = max(days)
     else:
-        days, today = fetch_all(os.environ["GH_USER"])
+        days, today = fetch_all(os.environ["GH_USER"], previous_days(DATA_PATH))
     out_dir = os.path.join(ROOT, "art", "skyline")
     os.makedirs(out_dir, exist_ok=True)
     made = []
@@ -302,9 +332,8 @@ def main():
     start = min(days)
     span = (datetime.date.fromisoformat(today) - datetime.date.fromisoformat(start)).days + 1
     counts = [days.get((datetime.date.fromisoformat(start) + datetime.timedelta(days=i)).isoformat(), 0) for i in range(span)]
-    data_path = os.environ.get("SKYLINE_DATA", os.path.join(ROOT, "docs", "skyline", "data.json"))
-    os.makedirs(os.path.dirname(data_path), exist_ok=True)
-    with open(data_path, "w", encoding="utf-8") as fh:
+    os.makedirs(os.path.dirname(DATA_PATH), exist_ok=True)
+    with open(DATA_PATH, "w", encoding="utf-8") as fh:
         json.dump({"user": os.environ.get("GH_USER", "mohitpal2621"), "updated": today, "start": start,
                    "total": sum(counts), "counts": counts}, fh, separators=(",", ":"))
         fh.write("\n")
