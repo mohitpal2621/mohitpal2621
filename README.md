@@ -1,219 +1,159 @@
-<h1 align="center">Hey, I'm Mohit <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/wave.svg" alt="👋" width="32" height="32" /></h1>
-
+<a name="top"></a>
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/typing-dark.svg" />
-    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/typing-light.svg" alt="Software Engineer, 2+ years shipping to prod · serverless, event-driven backends on AWS · iOS and Android in-app payments, end to end · RL environments for AI coding agents" width="640" />
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/hero-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/hero.svg" alt="Hey, I'm Mohit. Full-stack software developer. building AI chat apps with 20M+ visits a month · serverless, event-driven backends on AWS · LLM endpoints, LangChain agents, vector search · in-app payments on iOS and Android · 2+ years shipping to production" width="100%" />
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-linkedin.svg" alt="LinkedIn" height="30" /></a>&nbsp;
-  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-email.svg" alt="Email" height="30" /></a>&nbsp;
-  <a href="https://leetcode.com/u/mohitpal2621/" title="340+ problems solved"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-leetcode.svg" alt="LeetCode: 340+ problems solved" height="30" /></a>
+  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-linkedin.svg" alt="LinkedIn" height="30" /></a>
+  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-email.svg" alt="Email" height="30" /></a>
+  <a href="https://leetcode.com/u/mohitpal2621/" title="340+ problems solved"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-leetcode.svg" alt="LeetCode: 340+ problems solved" height="30" /></a>
 </p>
 
 <p align="center">
-  <a href="#-about-me" title="Jump to About"><kbd>&nbsp;About&nbsp;</kbd></a>&nbsp;
-  <a href="#-what-ive-shipped" title="Jump to Experience"><kbd>&nbsp;Experience&nbsp;</kbd></a>&nbsp;
-  <a href="#-arcade" title="Jump to Arcade"><kbd>&nbsp;Arcade&nbsp;</kbd></a>&nbsp;
-  <a href="#-tech-stack" title="Jump to Stack"><kbd>&nbsp;Stack&nbsp;</kbd></a>&nbsp;
-  <a href="#-featured-projects" title="Jump to Projects"><kbd>&nbsp;Projects&nbsp;</kbd></a>&nbsp;
-  <a href="#-activity" title="Jump to Activity"><kbd>&nbsp;Activity&nbsp;</kbd></a>&nbsp;
-  <a href="#-lets-connect" title="Jump to Contact"><kbd>&nbsp;Contact&nbsp;</kbd></a>
+  <a href="#about" title="Jump to About"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/nav-about.svg" alt="About" height="30" /></a>
+  <a href="#experience" title="Jump to Experience"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/nav-experience.svg" alt="Experience" height="30" /></a>
+  <a href="#arcade" title="Jump to Arcade"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/nav-arcade.svg" alt="Arcade" height="30" /></a>
+  <a href="#stack" title="Jump to Stack"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/nav-stack.svg" alt="Stack" height="30" /></a>
+  <a href="#projects" title="Jump to Projects"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/nav-projects.svg" alt="Projects" height="30" /></a>
+  <a href="#activity" title="Jump to Activity"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/nav-activity.svg" alt="Activity" height="30" /></a>
+  <a href="#contact" title="Jump to Contact"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/nav-contact.svg" alt="Contact" height="30" /></a>
 </p>
 
-## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-about.svg" alt="🖥️" width="28" height="28" /> About me
+<a name="about"></a>
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-about-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-about.svg" alt="About me" width="100%" />
+  </picture>
+</p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/room.svg" alt="Pixel-art me, coding at night on a chunky retro monitor while a cat naps on top of it" width="320" />
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/about-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/about.svg" alt="Pixel art of me coding at night while a cat naps on the monitor. I build AI chat apps with 20M+ visits a month and 600K+ installs, end to end: serverless backends on AWS, LLM endpoints, in-app payments and the web and mobile apps on top. Now: Software Developer at 4 Way Technologies. Building: SpicyChat AI · PixelChat AI · ChatReal AI. Studied: B.Tech CSE, MAIT Delhi (2024) · CGPA 8.7. Based In: Gurgaon, India." width="100%" />
+  </picture>
 </p>
 
-I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of shipping production systems. I design **serverless, event-driven services on AWS**, own features **end to end across web and mobile**, and build **RL environments and verifiers for AI coding agents**.
+<a name="experience"></a>
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-experience-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-experience.svg" alt="What I've shipped" width="100%" />
+  </picture>
+</p>
 
-- 🔭 **Now:** Software Engineer at **4 Way Technologies**, building **SpicyChat** and **PixelChat** for NextDay AI
-- 🤖 **Also:** contract work with **Handshake AI** on agentic coding tasks and RL environments in Python
-- 🎓 **Education:** B.Tech CSE, Maharaja Agrasen Institute of Technology, Delhi (2024) · CGPA 8.7
-- 📍 **Based in:** Gurgaon, India
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/experience-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/experience.svg" alt="Software Developer at 4 Way Technologies, Delhi, since Aug 2024. Spicychat Ai & Pixelchat Ai (20M+ VISITS/MO, 600K+ INSTALLS): AI character chat platforms, built for NextDay AI. Backend and frontend, end to end, on web, iOS and Android. Serverless microservices on AWS Lambda, API Gateway and DynamoDB. Event-driven jobs on EventBridge, SQS and Step Functions. Content moderation and payments features for SpicyChat. Localization in 9 languages, cached on Cloudflare's CDN. Premium content via Contentful + GraphQL, no app release. Chatreal Ai (IOS + ANDROID): In-house AI companion app with 3D characters. In-app purchases and subscriptions, verified server-side. Real-time renewals and cancellations via Google Cloud Pub/Sub. NestJS APIs with rate limits on chat and LLM endpoints. Private client code, but happy to walk you through the design." width="100%" />
+  </picture>
+</p>
 
-## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-shipped.svg" alt="🚀" width="28" height="28" /> What I've shipped
+<a name="arcade"></a>
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-arcade-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-arcade.svg" alt="Arcade" width="100%" />
+  </picture>
+</p>
 
-<details open>
-<summary><b>🏢 Software Engineer · 4 Way Technologies</b> &nbsp;<sub>Aug 2024 – Present · New Delhi, India</sub></summary>
-<br />
-
-**NextDay AI: SpicyChat & PixelChat** · high-traffic AI chat platforms
-- Own backend **and** frontend end to end with Node.js, TypeScript, React and React Native
-- Designed serverless microservices on **AWS Lambda, API Gateway and DynamoDB**, shipped with the Serverless Framework across dev → UAT → prod
-- Built event-driven workflows on **EventBridge, SQS and Step Functions** for async and background processing
-- Extended the **Contentful + GraphQL** integration to serve platform-specific premium content without app releases
-
-**ChatReal AI**
-- Implemented **iOS & Android in-app purchases and subscriptions** end to end with react-native-iap and server-side receipt validation
-- Processed subscription lifecycle events in real time with **Google Cloud Pub/Sub**
-- Built modular **NestJS** REST APIs with rate limiting on chat and LLM endpoints
-
-</details>
-
-<details open>
-<summary><b>🤖 Handshake AI · Contract</b> &nbsp;<sub>RL environments & agentic coding tasks</sub></summary>
-<br />
-
-- Author Dockerized coding tasks with **verifiers and trial harnesses** in Python, used to train and evaluate AI coding agents
-- **30+ accepted tasks** across Handshake AI and other RL data platforms, spanning security, ML, data/ETL, debugging and scientific computing
-- Built my own tooling for the work, including a task validation toolchain and a CI monitoring dashboard
-
-</details>
-
-## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-arcade.svg" alt="🕹️" width="28" height="28" /> Arcade
-
-**PUSH TO PROD** is a tiny Mario-style platformer I built from scratch. Run, jump, stomp bugs and carry your code from localhost to staging to production. It plays right in your browser, on a phone too.
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/arcade-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/arcade.svg" alt="PUSH TO PROD: A tiny Mario-style platformer I built from scratch. Stomp bugs, grab coffee and carry your code from localhost to production. Canvas and Web Audio, no libraries. A bot plays every level to prove it can be beaten. Works on phones too." width="100%" />
+  </picture>
+</p>
 
 <p align="center">
   <a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play PUSH TO PROD"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/arcade/demo.svg" alt="PUSH TO PROD gameplay: a pixel developer grabs coffee from a code block, stomps bugs, collects bits, climbs the SHIP staircase and pushes the code into the server" width="672" /></a>
 </p>
 
 <p align="center">
-  <a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play PUSH TO PROD"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-play.svg" alt="Play now" height="30" /></a>
-  <br />
-  <sub><kbd>←</kbd> <kbd>→</kbd> move &nbsp;·&nbsp; <kbd>Space</kbd> jump &nbsp;·&nbsp; <kbd>Shift</kbd> run &nbsp;·&nbsp; on-screen buttons on phones</sub>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/" title="Play PUSH TO PROD"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-play.svg" alt="Play now" height="30" /></a>
 </p>
 
-<details>
-<summary><b>⚙️ How it's built</b></summary>
-<br />
-
-- One web page and two small JavaScript modules, no libraries: a 320×176 canvas, chiptune music and sound effects made with Web Audio, and keyboard, touch and gamepad controls
-- Three hand-made worlds; a search bot plays every one of them to prove each can be finished without the run button
-- The preview above is recorded from the game's own engine into an animated SVG, because a README can't run JavaScript
-
-</details>
-
-## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-stack.svg" alt="🧰" width="28" height="28" /> Tech stack
-
+<a name="stack"></a>
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/stack-narrow.svg" />
-    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/stack.svg" alt="Tech stack. Languages: TypeScript, JavaScript, Python, C++, SQL. Backend: Node.js, NestJS, Express, REST, GraphQL, Socket.IO. Cloud: AWS Lambda, API Gateway, DynamoDB, EventBridge, SQS, Step Functions, S3, Serverless Framework, GCP Pub/Sub, Cloudflare. Web and mobile: React, React Native, Next.js, Redux, in-app purchases. Data and CMS: MongoDB, MySQL, Prisma, TypeORM, Firebase, Contentful. AI and DevOps: LangChain, LLM apps, RL environments, Docker, GitHub Actions, Jest, Linux, Git" width="100%" />
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-stack-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-stack.svg" alt="Tech stack" width="100%" />
   </picture>
 </p>
 
-## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-projects.svg" alt="💾" width="28" height="28" /> Featured projects
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/stack-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/stack.svg" alt="Tech stack. Languages: TypeScript, JavaScript, Python, SQL, C++. Backend: Node.js, NestJS, Express, REST, GraphQL, Socket.IO, Microservices. Ai & Llm: LLM integration, LangChain, Agent workflows, ChromaDB. Cloud: AWS Lambda, API Gateway, DynamoDB, S3, SQS, EventBridge, Step Functions, CloudWatch, Serverless, GCP Pub/Sub, Cloudflare. Web & Mobile: React, React Native, Next.js, In-app purchases. Data & Cms: PostgreSQL, MySQL, MongoDB, ClickHouse, Databricks, Contentful. Devops: Docker, GitHub Actions, Jest, Postman, Git." width="100%" />
+  </picture>
+</p>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/mohitpal2621/realTimeChatApp">💬 Chat-Pulse</a></h3>
-      Real-time chat app with JWT auth, 1:1 and group chats, typing indicators, unread counts and read receipts.
-      <br /><br />
-      <code>React</code> <code>Chakra UI</code> <code>Node.js</code> <code>Express</code> <code>Socket.IO</code> <code>MongoDB</code>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/mohitpal2621/Nest-js">🚗 Car Pricing API</a></h3>
-      NestJS API that estimates used-car prices from approved sale reports, with cookie-session auth, scrypt password hashing, admin guards and e2e tests.
-      <br /><br />
-      <code>NestJS</code> <code>TypeScript</code> <code>TypeORM</code> <code>SQLite</code> <code>Jest</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/mohitpal2621/BlogPulse">📝 BlogPulse</a></h3>
-      Markdown-powered blog on Next.js with static generation and incremental revalidation, syntax-highlighted posts and a MongoDB-backed contact API.
-      <br /><br />
-      <code>Next.js</code> <code>React</code> <code>MongoDB</code> <code>Markdown</code>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/mohitpal2621/Expensify">💸 Expensify</a></h3>
-      Expense manager with Google sign-in, Firebase sync, date-range filters and sorting, a Jest test suite and a custom Webpack build.
-      <br /><br />
-      <code>React</code> <code>Redux</code> <code>Firebase</code> <code>Jest</code> <code>Webpack</code>
-    </td>
-  </tr>
-</table>
+<a name="projects"></a>
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-projects-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-projects.svg" alt="Side projects" width="100%" />
+  </picture>
+</p>
 
-<details>
-<summary><b>📂 More projects</b> (click to expand)</summary>
-<br />
+<p align="center">
+  <a href="https://github.com/mohitpal2621/realTimeChatApp" title="Open Chat-Pulse on GitHub">
+    <picture>
+      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-chat-pulse-narrow.svg" />
+      <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-chat-pulse.svg" alt="Chat-Pulse: Real-time chat with JWT auth, group chats and read receipts. Built with React, Chakra UI, Node.js, Express, Socket.IO, MongoDB." width="100%" />
+    </picture>
+  </a>
+</p>
 
-| Project | What it is | Stack |
-| :-- | :-- | :-- |
-| [DSA](https://github.com/mohitpal2621/DSA) | Data structures and algorithms practice: linked lists, priority queues and sorting | C++ |
-| [KeeperNotes](https://github.com/mohitpal2621/KeeperNotes) | Notes app with a Material UI front end and an Express + MongoDB API | React, MUI, Express, Mongoose |
-| [dashboard](https://github.com/mohitpal2621/dashboard) | Data dashboard with filterable views served from an Express + MongoDB API | React, Express, Mongoose |
-| [code-detective-be](https://github.com/mohitpal2621/code-detective-be) | NestJS + Prisma backend, work in progress | NestJS, Prisma, TypeScript |
+<p align="center">
+  <a href="https://github.com/mohitpal2621/Nest-js" title="Open Car Pricing Api on GitHub">
+    <picture>
+      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-car-pricing-api-narrow.svg" />
+      <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-car-pricing-api.svg" alt="Car Pricing Api: NestJS API that prices used cars from approved sale reports. Built with NestJS, TypeScript, TypeORM, SQLite, Jest." width="100%" />
+    </picture>
+  </a>
+</p>
 
-</details>
+<p align="center">
+  <a href="https://github.com/mohitpal2621/BlogPulse" title="Open Blogpulse on GitHub">
+    <picture>
+      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-blogpulse-narrow.svg" />
+      <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-blogpulse.svg" alt="Blogpulse: Markdown blog on Next.js with static generation and an API. Built with Next.js, React, MongoDB, Markdown." width="100%" />
+    </picture>
+  </a>
+</p>
 
-> [!NOTE]
-> Most of my production work lives in private client repositories. Happy to walk through the architecture in a conversation.
+<p align="center">
+  <a href="https://github.com/mohitpal2621/Expensify" title="Open Expensify on GitHub">
+    <picture>
+      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-expensify-narrow.svg" />
+      <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/project-expensify.svg" alt="Expensify: Expense manager with Google sign-in and Firebase sync. Built with React, Redux, Firebase, Jest, Webpack." width="100%" />
+    </picture>
+  </a>
+</p>
 
-## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-activity.svg" alt="📊" width="28" height="28" /> Activity
+<p align="center">
+  <a href="https://github.com/mohitpal2621?tab=repositories" title="All my repositories"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-more.svg" alt="More projects on GitHub" height="30" /></a>
+</p>
+
+<a name="activity"></a>
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-activity-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-activity.svg" alt="Activity" width="100%" />
+  </picture>
+</p>
 
 <!-- skyline:start -->
 <p align="center">
-  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="446 contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="My contributions in the last 12 months as a slowly turning 3D skyline" width="100%" /></a>
 </p>
 
-<p align="center"><sub>One pin per day I contributed, taller and brighter means busier · refreshed every 6 hours · <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/"><b>open in 3D</b></a> to rotate it yourself or pick any dates</sub></p>
-
-**See another range** (click one to open it):
-
-<details name="skyline-range">
-<summary><b>📅 Last 30 days</b> · 117 contributions</summary>
-<br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="117 contributions in the last 30 days as a 3D skyline" width="100%" />
+  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Rotate it, zoom in and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-3d.svg" alt="Open in 3D and pick any dates" height="30" /></a>
 </p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 Last 90 days</b> · 375 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="375 contributions in the last 90 days as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2026 so far</b> · 435 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2026.svg" alt="435 contributions in 2026 so far as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2025</b> · 11 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2025.svg" alt="11 contributions in 2025 as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2024</b> · 132 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2024.svg" alt="132 contributions in 2024 as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2023</b> · 67 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2023.svg" alt="67 contributions in 2023 as a 3D skyline" width="100%" />
-</p>
-</details>
-
-<details name="skyline-range">
-<summary><b>📅 2021</b> · 2 contributions</summary>
-<br />
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2021.svg" alt="2 contributions in 2021 as a 3D skyline" width="100%" />
-</p>
-</details>
-
 <!-- skyline:end -->
 
 <details>
@@ -228,17 +168,30 @@ I'm a backend-leaning **full-stack Software Engineer** with **2+ years** of ship
 </p>
 </details>
 
-## <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/icon-contact.svg" alt="💌" width="28" height="28" /> Let's connect
-
-Always happy to talk serverless architecture, in-app payments or AI tooling.
-
+<a name="contact"></a>
 <p align="center">
-  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-linkedin.svg" alt="LinkedIn" height="30" /></a>&nbsp;
-  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/retro/btn-email.svg" alt="Email" height="30" /></a>
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-contact-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/title-contact.svg" alt="Let's connect" width="100%" />
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=Profile%20views&color=1d2b53&style=flat-square" alt="Profile views" />
-  <br />
-  <sub><a href="#hey-im-mohit-">Back to top ↑</a></sub>
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/contact-narrow.svg" />
+    <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/contact.svg" alt="Always happy to talk about AI chat backends, serverless on AWS and in-app payments. mohitpal2621@gmail.com · Gurgaon, India" width="100%" />
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/mohit-pal-b0076a185/" title="Connect on LinkedIn"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-linkedin.svg" alt="LinkedIn" height="30" /></a>
+  <a href="mailto:mohitpal2621@gmail.com" title="mohitpal2621@gmail.com"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-email.svg" alt="Email" height="30" /></a>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=PROFILE%20VIEWS&color=1d2b53&style=pixel" alt="Profile views" />
+</p>
+
+<p align="center">
+  <a href="#top" title="Back to top"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/pixel/btn-top.svg" alt="Back to top" height="30" /></a>
 </p>
