@@ -246,7 +246,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=PROFILE%20VIEWS&color=1d2b53&style=pixel" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=mohitpal2621&label=PROFILE+VIEWS&color=1d2b53&style=for-the-badge" alt="Profile views" />
 </p>
 
 <p align="center">
