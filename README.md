@@ -164,10 +164,10 @@
 </details>
 
 <details name="skyline-range">
-<summary><b>📅 Last 90 days</b> · 853 contributions</summary>
+<summary><b>📅 Last 90 days</b> · 846 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="853 contributions in the last 90 days as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="846 contributions in the last 90 days as a 3D skyline" width="100%" />
 </p>
 </details>
 
