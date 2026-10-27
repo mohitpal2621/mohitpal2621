@@ -148,7 +148,7 @@
 
 <!-- skyline:start -->
 <p align="center">
-  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="995 contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="990 contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
 </p>
 
 <p align="center">
@@ -156,26 +156,26 @@
 </p>
 
 <details name="skyline-range">
-<summary><b>📅 Last 30 days</b> · 627 contributions</summary>
+<summary><b>📅 Last 30 days</b> · 626 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="627 contributions in the last 30 days as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="626 contributions in the last 30 days as a 3D skyline" width="100%" />
 </p>
 </details>
 
 <details name="skyline-range">
-<summary><b>📅 Last 90 days</b> · 869 contributions</summary>
+<summary><b>📅 Last 90 days</b> · 863 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="869 contributions in the last 90 days as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="863 contributions in the last 90 days as a 3D skyline" width="100%" />
 </p>
 </details>
 
 <details name="skyline-range">
-<summary><b>📅 2026 so far</b> · 985 contributions</summary>
+<summary><b>📅 2026 so far</b> · 984 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2026.svg" alt="985 contributions in 2026 so far as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2026.svg" alt="984 contributions in 2026 so far as a 3D skyline" width="100%" />
 </p>
 </details>
 
