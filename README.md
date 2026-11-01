@@ -156,18 +156,18 @@
 </p>
 
 <details name="skyline-range">
-<summary><b>📅 Last 30 days</b> · 633 contributions</summary>
+<summary><b>📅 Last 30 days</b> · 604 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="633 contributions in the last 30 days as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="604 contributions in the last 30 days as a 3D skyline" width="100%" />
 </p>
 </details>
 
 <details name="skyline-range">
-<summary><b>📅 Last 90 days</b> · 895 contributions</summary>
+<summary><b>📅 Last 90 days</b> · 892 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="895 contributions in the last 90 days as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-90-days.svg" alt="892 contributions in the last 90 days as a 3D skyline" width="100%" />
 </p>
 </details>
 
