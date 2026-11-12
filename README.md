@@ -148,7 +148,7 @@
 
 <!-- skyline:start -->
 <p align="center">
-  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="1134 contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
+  <a href="https://mohitpal2621.github.io/mohitpal2621/skyline/" title="Open it in 3D: rotate, zoom and pick any dates"><img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-12-months.svg" alt="1139 contributions in the last 12 months as a slowly turning 3D skyline: one green pin per active day, taller and brighter on busier days" width="100%" /></a>
 </p>
 
 <p align="center">
@@ -156,10 +156,10 @@
 </p>
 
 <details name="skyline-range">
-<summary><b>📅 Last 30 days</b> · 331 contributions</summary>
+<summary><b>📅 Last 30 days</b> · 264 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="331 contributions in the last 30 days as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/last-30-days.svg" alt="264 contributions in the last 30 days as a 3D skyline" width="100%" />
 </p>
 </details>
 
@@ -172,10 +172,10 @@
 </details>
 
 <details name="skyline-range">
-<summary><b>📅 2026 so far</b> · 1,128 contributions</summary>
+<summary><b>📅 2026 so far</b> · 1,133 contributions</summary>
 <br />
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2026.svg" alt="1128 contributions in 2026 so far as a 3D skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/mohitpal2621/mohitpal2621/main/art/skyline/2026.svg" alt="1133 contributions in 2026 so far as a 3D skyline" width="100%" />
 </p>
 </details>
 
